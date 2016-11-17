@@ -11,4 +11,7 @@ M.WorldwideGross = str2double(M.WorldwideGross);
 %---------------------------------------
 M.ReleaseDate = datetime(M.ReleaseDate,'InputFormat','MM/dd/yyyy');
 
+extension = FetchFromAPI(M,1000);
+M=join(M,extension);
+
 
