@@ -1,4 +1,5 @@
 Assignment 1: Hollywood Data Science
+====================================
 Andrei Isac
 David Pavlov
 Win Leong Xuan    S3208435
