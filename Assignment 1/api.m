@@ -1,7 +1,7 @@
-movieName = 'Singularity';
-ryear = '';
+movieName = 'Avatar';
+ryear = '2009';
 
-url = 'http://www.omdbapi.com/?t=#{movie}&y=#{ryear}&plot=short&r=json'; 
+url = 'http://www.omdbapi.com/?t=#{movie}&y=#{ryear}&plot=short&r=json&tomatoes=true'; 
 url = strrep(url,'#{movie}',movieName);
 url = strrep(url,'#{ryear}',ryear);
 
