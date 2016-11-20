@@ -87,3 +87,10 @@ end
 1.2 Types
 ---------
 By referring to our main code, the Release Date feature is converted to date/time data format where the year will be used to query the API for additional data. The Movie feature will be left as it is which is the string data type. The Production Budget, Domestic Gross and Worldwide Gross was cleaned up by removing the '$' sign and the values were converted to doubles where it can later be used for data analysis easier. The Genre will also be of string data type. Lastly, the imdb Rating, imdb Votes and tomato Rating will be also converted from strings to doubles for further data analysis. It is also good to mention, due to movie titles not matching accordingly to the titles on the omd API, we cannot query the correct information provided by the CSV file. Also, a few of the release years also do not match with omdb API. Therefore, sometimes no data or wrong data is obtained from the API.
+
+1.3 Data Science Projects
+-------------------------
+
+1.4 Bonus
+---------
+
