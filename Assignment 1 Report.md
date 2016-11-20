@@ -15,7 +15,7 @@ For this assignment, we were provided with a CSV file of movies names. The data 
 The CSV file will be imported to MatLab as a table where we will clean and collect additional data to append to this table. After importing the CSV file, we cleaned up the unecessary special characters and convert the variable to the corresponding data type. The additional data will be then queried from http://www.omdbapi.com where the data will be provided in a JSON format. By using the movie name and the release year, we are able to query the data for each movie individually. For the queries, we created a function in MatLab that will return a new table with the 4 additional variable which later will be joined to the movie table. Below, you can find the code that was used for cleaning and enriching data about the movies. 
 
 *Main code*
-
+~~~~
 `% Import CSV file into MatLab as table
 M = readtable('movievalue.csv');
 
@@ -39,11 +39,12 @@ M.Movie = strrep(M.Movie, 'â€™', char(39));
 % Get information from API and join them to table
 Extension = FetchFromAPI(M,1100);
 M = join(M, Extension);`
+~~~~
 
 Here below, you can find the function used for data collection.
 
 *Function*
-
+~~~~
 `function [result] = FetchFromAPI( movieTable,n )
 
 % Initialize variables
@@ -81,6 +82,7 @@ end
 result = table(genre,irating,ivotes,trating,rank','VariableNames',{'Genre','imdbRating','imdbVotes','tomatoRating','Rank'});
 
 end`
+~~~~
 
 1.2 Types
 ---------
