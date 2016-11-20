@@ -1,7 +1,7 @@
 Assignment 1: Hollywood Data Science (Group 16)
 ===============================================
 
-**Andrei Isac (Sxxxxxxx) - David Pavlov (Sxxxxxxx) - Win Leong Xuan (S3208435)**
+**Andrei Isac (Sxxxxxxx) - David Pavlov (S3187330) - Win Leong Xuan (S3208435)**
 
 1.1 Collect it...Link it!
 -------------------------
