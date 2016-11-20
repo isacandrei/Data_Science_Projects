@@ -16,7 +16,7 @@ The CSV file will be imported to MatLab as a table where we will clean and colle
 
 *Main code*
 ~~~~
-`% Import CSV file into MatLab as table
+% Import CSV file into MatLab as table
 M = readtable('movievalue.csv');
 
 % Remove $ signs and convert values to doubles
@@ -38,14 +38,14 @@ M.Movie = strrep(M.Movie, 'â€™', char(39));
 
 % Get information from API and join them to table
 Extension = FetchFromAPI(M,1100);
-M = join(M, Extension);`
+M = join(M, Extension);
 ~~~~
 
 Here below, you can find the function used for data collection.
 
 *Function*
 ~~~~
-`function [result] = FetchFromAPI( movieTable,n )
+function [result] = FetchFromAPI( movieTable,n )
 
 % Initialize variables
 names = movieTable.Movie;
@@ -81,7 +81,7 @@ end
 % Create table with variable retained from API
 result = table(genre,irating,ivotes,trating,rank','VariableNames',{'Genre','imdbRating','imdbVotes','tomatoRating','Rank'});
 
-end`
+end
 ~~~~
 
 1.2 Types
