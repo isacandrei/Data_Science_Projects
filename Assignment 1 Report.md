@@ -1,5 +1,4 @@
 Assignment 1: Hollywood Data Science
 ====================================
-Andrei Isac
-David Pavlov
-Win Leong Xuan    S3208435
+
+**Andrei Isac (Sxxxxxxx) - David Pavlov (Sxxxxxxx) - Win Leong Xuan (S3208435)**
