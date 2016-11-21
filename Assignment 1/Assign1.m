@@ -46,6 +46,7 @@ bar(arr(:,1),arr(:,3));
 figure(3);
 bar(arr(:,1),arr(:,2));
 
+%plot movie rank by worldwide gross
 figure(4)
 plot(M.Rank(1:n),(M.WorldwideGross(1:n)));
 
