@@ -52,3 +52,7 @@ By referring to our main code, the Release Date feature is converted to date/tim
 1.4 Bonus
 ---------
 
+1.5 Running instructions
+---------
+In order to run the code open (Assign1.m) and set value for *n*, where *n* is the number of movies for which the evaluation should be performed. Once the value is execute the file.
+
