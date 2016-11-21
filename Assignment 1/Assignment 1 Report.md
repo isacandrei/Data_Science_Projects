@@ -53,6 +53,30 @@ By referring to our main code, the Release Date feature is converted to date/tim
 ---------
 a)
 
+b)
+
+The following graph represents comparison betwen IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
+    ![] (images/rateDiff.jpg) 
+   As seen from the graph IMDb's users tend to be more generous when rating a movie compared to RottenTomatos' users. The reason for such discrepancies is that RottenTomatoes' rating is formed by professional critics while IMDb's ranks are formed by regular users
+
+
+It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following. The average rating is calculated of all of the movies that was given within the CSV list and the starring average rating is calculated from all the movies that the actor was starring in.
+
+[Actor Rating](Rating_Actor.m)
+
+| Actors | Starring Average Rating | Average Rating|
+|----------|:----------:|:-----------:|
+| 'Bernd Eichinger' | 9.2 | 6.4 |
+| 'Donald Arthur' | 9.2 | 6.4 |
+| 'Michael Ende'| 9.2 | 6.4 |
+| 'Richard S. Castellano' | 9.2 | 6.4 |
+| 'Robert Easton' | 9.2 | 6.4 |
+| 'Ali Astin' | 8.9 | 6.4 |
+| 'David Aston' | 8.9 | 6.4 |
+| 'E.G. Marshall' | 8.9 | 6.4 |
+| 'Laura Lovelace' | 8.9 | 6.4 |
+| 'Noel Appleby' | 8.85 | 6.4 |
+
 |-|Country|Id|
 |-----------|:-----------:|----------|
     |Argentina|1|
@@ -100,28 +124,6 @@ a)
     |United Arab Emirates|43|
     |Uruguay|44|
 
-b)
-The following graph represents comparison betwen IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
-    ![] (images/rateDiff.jpg) 
-   As seen from the graph IMDb's users tend to be more generous when rating a movie compared to RottenTomatos' users. The reason for such discrepancies is that RottenTomatoes' rating is formed by professional critics while IMDb's ranks are formed by regular users
-
-
-It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following. The average rating is calculated of all of the movies that was given within the CSV list and the starring average rating is calculated from all the movies that the actor was starring in.
-
-[Actor Rating](Rating_Actor.m)
-
-| Actors | Starring Average Rating | Average Rating|
-|----------|:----------:|:-----------:|
-| 'Bernd Eichinger' | 9.2 | 6.4 |
-| 'Donald Arthur' | 9.2 | 6.4 |
-| 'Michael Ende'| 9.2 | 6.4 |
-| 'Richard S. Castellano' | 9.2 | 6.4 |
-| 'Robert Easton' | 9.2 | 6.4 |
-| 'Ali Astin' | 8.9 | 6.4 |
-| 'David Aston' | 8.9 | 6.4 |
-| 'E.G. Marshall' | 8.9 | 6.4 |
-| 'Laura Lovelace' | 8.9 | 6.4 |
-| 'Noel Appleby' | 8.85 | 6.4 |
 
 1.5 Running instructions
 ---------
