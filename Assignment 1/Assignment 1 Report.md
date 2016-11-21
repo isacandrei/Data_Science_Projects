@@ -51,6 +51,57 @@ By referring to our main code, the Release Date feature is converted to date/tim
 
 1.4 Bonus
 ---------
+a)
+
+|Country|Id|
+|-----------|:-----------:|
+    |Argentina|1|
+    |Australia|2|
+    |Bahamas|3|
+    |Belgium|4|
+    |Brazil|5|
+    |Bulgaria|6|
+    |Canada|7|
+    |China|8|
+    |Czech Republic|9|
+    |Denmark|10|
+    |Finland|11|
+    |France|12|
+    |Germany|13|
+    |Hong Kong|14|
+    |Hungary|15|
+    |Iceland|16|
+    |India|17|
+    |Ireland|18|
+    |Italy|19|
+    |Japan|20|
+    |Malta|21|
+    |Morocco|22|
+    |Netherlands|23|
+    |New Zealand|24|
+    |Norway|25|
+    |Paraguay|26|
+    |Peru|27|
+    |Poland|28|
+    |Portugal|29|
+    |Romania|30|
+    |Russia|31|
+    |Singapore|32|
+    |Slovakia|33|
+    |Slovenia|34|
+    |South Africa|35|
+    |Spain|36|
+    |Sweden|37|
+    |Switzerland|38|
+    |Taiwan|39|
+    |Tunisia|40|
+    |UK|41|
+    |USA|42|
+    |United Arab Emirates|43|
+    |Uruguay|44|
+
+b)
+
 It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following. The average rating is calculated of all of the movies that was given within the CSV list and the starring average rating is calculated from all the movies that the actor was starring in.
 
 [Actor Rating](Rating_Actor.m)
