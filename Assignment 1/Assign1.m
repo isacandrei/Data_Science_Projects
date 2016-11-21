@@ -1,5 +1,5 @@
 % Import CSV file into MatLab as table
-M = readtable('movievalue.csv','delimiter',';');
+M = readtable('movievalue.csv');
 
 % Remove $ signs and convert values to doubles
 M.ProductionBudget = strrep(M.ProductionBudget, '$', '');
@@ -15,28 +15,27 @@ M.WorldwideGross = str2double(M.WorldwideGross);
 M.ReleaseDate = datetime(M.ReleaseDate,'InputFormat','MM/dd/yyyy');
 
 % Replace unknown characters
-M.Movie = strrep(M.Movie, '???', '-');
-M.Movie = strrep(M.Movie, '???', char(39));
+M.Movie = strrep(M.Movie, 'â€”', '-');
+M.Movie = strrep(M.Movie, 'â€™', char(39));
 
 % Get information from API and join them to table
-Extension = FetchFromAPI(M,1100);
+n=1200;
+Extension = FetchFromAPI(M,n);
 M = join(M, Extension);
-M = M(1:1100,:);
-
 %
 figure(1);
-bar(M.imdbRating(1:1100)-M.tomatoRating(1:1100))
+bar(M.imdbRating(1:n)-M.tomatoRating(1:n))
 % 
-y=unique(year(M.ReleaseDate));
+y=unique(year(M.ReleaseDate(1:n)));
 %arr[1]-production year, arr[2]-average gross, arr[3] - number of movies
 arr=zeros(length(y),3);
 for i=1:length(y)
     arr(i,1)=y(i);
-    moviesPerYear=find(year(M.ReleaseDate)==y(i));
+    moviesPerYear=find(year(M.ReleaseDate(1:n))==y(i));
     arr(i,3)=length(moviesPerYear);
     for j=1:length(moviesPerYear)
         %calculate the total gross of all movies released that year
-        arr(i,2)=M.WorldwideGross(i)+M.DomesticGross(i);
+        arr(i,2)=M.WorldwideGross(i);
     end;
     %calculate the average
     arr(i,2)=arr(i,2)/arr(i,3);
@@ -48,5 +47,5 @@ figure(3);
 bar(arr(:,1),arr(:,2));
 
 figure(4)
-plot(M.Rank,(M.WorldwideGross+M.DomesticGross));
+plot(M.Rank(1:n),(M.WorldwideGross(1:n)));
 
