@@ -51,6 +51,22 @@ By referring to our main code, the Release Date feature is converted to date/tim
 
 1.4 Bonus
 ---------
+It seems like starring one of the following actors in a movie will most likely lead to higher ratings. The code used for this exercise is the following.
+
+[Actor Rating]()
+
+| Actors | Starring Average Rating | Average Rating|
+|----------|:----------:|:-----------:|
+| 'Bernd Eichinger' | 9.2 | 6.4 |
+| 'Donald Arthur' | 9.2 | 6.4 |
+| 'Michael Ende'| 9.2 | 6.4 |
+| 'Richard S. Castellano' | 9.2 | 6.4 |
+| 'Robert Easton' | 9.2 | 6.4 |
+| 'Ali Astin' | 8.9 | 6.4 |
+| 'David Aston' | 8.9 | 6.4 |
+| 'E.G. Marshall' | 8.9 | 6.4 |
+| 'Laura Lovelace' | 8.9 | 6.4 |
+| 'Noel Appleby' | 8.85 | 6.4 |
 
 1.5 Running instructions
 ---------
