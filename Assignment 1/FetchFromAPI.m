@@ -9,7 +9,6 @@ ivotes = zeros(size,1);
 trating = zeros(size,1);
 genre = cell(size,1);
 rank = 1:1:size;        % Common variable for joining tables
-actors = cell(size,1);
 options = weboptions('Timeout',10);
 
 for k=1:n
@@ -26,7 +25,6 @@ for k=1:n
     ivotes(k) = str2double(matlab_results.imdbVotes);
     trating(k) = str2double(matlab_results.tomatoRating);
     genre{k} = matlab_results.Genre;
-    actors{k} = matlab_results.Actors;
     catch ME
        warning(strcat('Error occurred while trying to process : ',names{k})) ;
        genre{k}='';          
@@ -34,7 +32,7 @@ for k=1:n
 end
 
 % Create table with variable retained from API
-result = table(genre,irating,ivotes,trating,rank',actors,'VariableNames',{'Genre','imdbRating','imdbVotes','tomatoRating','Rank','Actors'});
+result = table(genre,irating,ivotes,trating,rank','VariableNames',{'Genre','imdbRating','imdbVotes','tomatoRating','Rank'});
 
 end
 
