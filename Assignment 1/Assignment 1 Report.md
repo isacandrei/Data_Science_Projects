@@ -12,7 +12,7 @@ Assignment 1: Hollywood Data Science (Group 16)
 -------------------------
 For this assignment, we were provided with a CSV file of movies names. The data in the CSV file needs to be cleaned up for further data analysis. Additional information will also be queried from the internet in order to enrich the data collection. The variables provided by the CSV are Rank, Release Date, Movie name, Production Budget, Domestic Gross and Worldwide Gross. Afterwards, 4 additional variables will be appended to the data set which are Genre, imdb Rating, imdb Votes and tomato Rating. The programming language of our choice will be MatLab.
 
-The CSV file will be imported to MatLab as a table where we will clean and collect additional data to append to this table. After importing the CSV file, we cleaned up the unecessary special characters and convert the variable to the corresponding data type. The additional data will be then queried from http://www.omdbapi.com where the data will be provided in a JSON format. By using the movie name and the release year, we are able to query the data for each movie individually. For the queries, we created a function in MatLab that will return a new table with the 4 additional variable which later will be joined to the movie table. Below, you can find the code that was used for cleaning and enriching data about the movies. 
+The CSV file will be imported to MatLab as a table where we will clean and collect additional data to append to this table. After importing the CSV file, we cleaned up the unnecessary special characters and convert the variable to the corresponding data type. The additional data will be then queried from http://www.omdbapi.com where the data will be provided in a JSON format. By using the movie name and the release year, we are able to query the data for each movie individually. For the queries, we created a function in MatLab that will return a new table with the 4 additional variable which later will be joined to the movie table. Below, you can find the code that was used for cleaning and enriching data about the movies. 
 
 [*Main Code*](Assign1.m)
 
@@ -22,7 +22,7 @@ Here below, you can find the function used for data collection.
 
 1.2 Types
 ---------
-By referring to our main code, the Release Date feature is converted to date/time data format where the year will be used to query the API for additional data. The Movie feature will be left as it is which is the string data type. The Production Budget, Domestic Gross and Worldwide Gross was cleaned up by removing the '$' sign and the values were converted to doubles where it can later be used for data analysis easier. The Genre will also be of string data type. The imdb Rating, imdb Votes and tomato Rating will be also converted from strings to doubles for further data analysis. Lastly, the Actors and Country are strings. It is also good to mention, due to movie titles not matching accordingly to the titles on the omd API, we cannot query the correct information provided by the CSV file. Also, a few of the release years also do not match with omdb API. Therefore, sometimes no data or wrong data is obtained from the API.
+By referring to our main code, the Release Date feature is converted to date/time data format where the year will be used to query the API for additional data. The Movie feature will be left as it is which is the string data type. The Production Budget, Domestic Gross and Worldwide Gross was cleaned up by removing the '$' sign and the values were converted to doubles where it can later be used for data analysis easier. The Genre will also be of string data type. The imdb Rating, imdb Votes and tomato Rating will be also converted from strings to doubles for further data analysis. Lastly, the Actors and Country are strings. It is also good to mention, due to movie titles not matching accordingly to the titles on the omdb API, we cannot query the correct information provided by the CSV file. Also, a few of the release years also do not match with omdb API. Therefore, sometimes no data or wrong data is obtained from the API.
 
 | Features | Data Type|
 |----------|----------|
@@ -45,17 +45,17 @@ By referring to our main code, the Release Date feature is converted to date/tim
   Number of movies released per year
     ![] (images/moviesPerYear.jpg)
     
-    We can observe that an increase in the number of movies, does not necesarly infer an increase in the quality/gross of the movies.
+    We can observe that an increase in the number of movies, does not necessarily infer an increase in the quality/gross of the movies.
     
    b)
    Movie rank vs worldwide gross
     ![] (images/RankGross.jpg)
     
-    There is a clear decreasing trend in the graph, with some ups and down that infer that not only the budget is inportant in making a succesfull movie. 
+    There is a clear decreasing trend in the graph, with some ups and down that infer that not only the budget is important in making a successful movie. 
 
 1.4 Bonus
 ---------
-A.1. The following graph represents comparison betwen IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
+A.1. The following graph represents comparison between IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
     ![] (images/rateDiff.jpg) 
    As seen from the graph IMDb's users tend to be more generous when rating a movie compared to RottenTomatos' users. The reason for such discrepancies is that RottenTomatoes' rating is formed by professional critics while IMDb's ranks are formed by regular users
    
@@ -76,16 +76,16 @@ B.1. It seems like if one of the following actors starring in a movie, will most
 | 'Laura Lovelace' | 8.9 | 6.4 |
 | 'Noel Appleby' | 8.85 | 6.4 |
 
-B.2. In the folowing graph, the average profit / productin budget is outlined. As we can observe, a greater budget does not necesarily infer a greater profit. 
+B.2. In the following graph, the average profit / production budget is outlined. As we can observe, a greater budget does not necessarily infer a greater profit. 
    ![] (images/profitPerProductionBudget.jpg)
 
-B.3. In the folowing graph the Average Worldwide Gross per country is outlined. As a surprise, the US is not in the top here, which lead us to compute the Maximum Worldwide Gross per country, which also confirmed our suppositions that an US movie had the biggest Gross of them all. 
+B.3. In the following graph the Average Worldwide Gross per country is outlined. As a surprise, the US is not in the top here, which lead us to compute the Maximum Worldwide Gross per country, which also confirmed our suppositions that an US movie had the biggest Gross of them all. 
 
 ![] (images/averageGrossPerCountry.jpg)
 
 ![] (images/maxGrossPerCountry.jpg)
 
-Due to the dificulties of aligning the xLabels properly, the folowing table will help the reader understand the graphs from above: 
+Due to the difficulties of aligning the xLabels properly, the following table will help the reader understand the graphs from above: 
 
 |-|Country|Id|
 |-----------|:-----------:|----------|
