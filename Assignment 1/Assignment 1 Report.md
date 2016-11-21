@@ -53,8 +53,8 @@ By referring to our main code, the Release Date feature is converted to date/tim
 ---------
 a)
 
-|Country|Id|
-|-----------|:-----------:|
+|-|Country|Id|
+|-----------|:-----------:|----------|
     |Argentina|1|
     |Australia|2|
     |Bahamas|3|
