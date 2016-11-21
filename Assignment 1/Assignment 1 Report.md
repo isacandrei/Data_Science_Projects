@@ -42,7 +42,7 @@ By referring to our main code, the Release Date feature is converted to date/tim
   a)
   Average gross per year for 1200 movies
     ![] (images/avgGrossPerYear.jpg) 
-  Movies released per year
+  Number of movies released per year
     ![] (images/moviesPerYear.jpg)
     
    b)
@@ -101,6 +101,10 @@ a)
     |Uruguay|44|
 
 b)
+The following graph represents comparison betwen IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
+    ![] (images/rateDiff.jpg) 
+   As seen from the graph IMDb's users tend to be more generous when rating a movie compared to RottenTomatos' users. The reason for such discrepancies is that RottenTomatoes' rating is formed by professional critics while IMDb's ranks are formed by regular users
+
 
 It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following. The average rating is calculated of all of the movies that was given within the CSV list and the starring average rating is calculated from all the movies that the actor was starring in.
 
