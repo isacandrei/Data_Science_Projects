@@ -25,14 +25,16 @@ for k=1:n
     ivotes(k) = str2double(matlab_results.imdbVotes);
     trating(k) = str2double(matlab_results.tomatoRating);
     genre{k} = matlab_results.Genre;
+    actors{k} = matlab_results.Actors;
     catch ME
        warning(strcat('Error occurred while trying to process : ',names{k})) ;
-       genre{k}='';          
+       genre{k}=''; 
+       actors{k}='';
     end 
 end
 
 % Create table with variable retained from API
-result = table(genre,irating,ivotes,trating,rank','VariableNames',{'Genre','imdbRating','imdbVotes','tomatoRating','Rank'});
+result = table(genre,irating,ivotes,trating,rank',actors,'VariableNames',{'Genre','imdbRating','imdbVotes','tomatoRating','Rank','Actors'});
 
 end
 
