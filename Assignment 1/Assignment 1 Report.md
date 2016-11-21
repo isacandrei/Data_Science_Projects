@@ -37,8 +37,35 @@ M.Movie = strrep(M.Movie, 'â€”', '-');
 M.Movie = strrep(M.Movie, 'â€™', char(39));
 
 % Get information from API and join them to table
-Extension = FetchFromAPI(M,1100);
+n=1200;
+Extension = FetchFromAPI(M,n);
 M = join(M, Extension);
+%
+figure(1);
+bar(M.imdbRating(1:n)-M.tomatoRating(1:n))
+% 
+y=unique(year(M.ReleaseDate(1:n)));
+%arr[1]-production year, arr[2]-average gross, arr[3] - number of movies
+arr=zeros(length(y),3);
+for i=1:length(y)
+    arr(i,1)=y(i);
+    moviesPerYear=find(year(M.ReleaseDate(1:n))==y(i));
+    arr(i,3)=length(moviesPerYear);
+    for j=1:length(moviesPerYear)
+        %calculate the total gross of all movies released that year
+        arr(i,2)=M.WorldwideGross(i);
+    end;
+    %calculate the average
+    arr(i,2)=arr(i,2)/arr(i,3);
+end;
+
+figure(2);
+bar(arr(:,1),arr(:,3));
+figure(3);
+bar(arr(:,1),arr(:,2));
+
+figure(4)
+plot(M.Rank(1:n),(M.WorldwideGross(1:n)));
 ~~~~
 
 Here below, you can find the function used for data collection.
@@ -47,13 +74,15 @@ Here below, you can find the function used for data collection.
 ~~~~
 function [result] = FetchFromAPI( movieTable,n )
 
+function [result] = FetchFromAPI( movieTable,n )
+
 % Initialize variables
 names = movieTable.Movie;
 ryear = year(movieTable.ReleaseDate);
 size = height(movieTable);
-irating = zeros(size,1);
+irating = NaN(size,1);
 ivotes = zeros(size,1);
-trating = zeros(size,1);
+trating = NaN(size,1);
 genre = cell(size,1);
 rank = 1:1:size;        % Common variable for joining tables
 actors = cell(size,1);
@@ -76,7 +105,8 @@ for k=1:n
     actors{k} = matlab_results.Actors;
     catch ME
        warning(strcat('Error occurred while trying to process : ',names{k})) ;
-       genre{k}='';          
+       genre{k}=''; 
+       actors{k}='';
     end 
 end
 
