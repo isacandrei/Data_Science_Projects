@@ -26,6 +26,15 @@ By referring to our main code, the Release Date feature is converted to date/tim
 
 1.3 Data Science Projects
 -------------------------
+  a)
+  Average gross per year for 1200 movies
+    ![] (images/avgGrossPerYear.jpg) 
+  Movies released per year
+    ![] (images/moviesPerYear.jpg)
+    
+   b)
+   Movie rank vs worldwide gross
+    ![] (images/RankGross.jpg)
 
 1.4 Bonus
 ---------
