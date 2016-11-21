@@ -4,11 +4,12 @@ function [result] = FetchFromAPI( movieTable,n )
 names = movieTable.Movie;
 ryear = year(movieTable.ReleaseDate);
 size = height(movieTable);
-irating = zeros(size,1);
+irating = NaN(size,1);
 ivotes = zeros(size,1);
-trating = zeros(size,1);
+trating = NaN(size,1);
 genre = cell(size,1);
 rank = 1:1:size;        % Common variable for joining tables
+actors = cell(size,1);
 options = weboptions('Timeout',10);
 
 for k=1:n
