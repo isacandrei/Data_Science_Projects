@@ -43,7 +43,7 @@ M = join(M, Extension);
 
 Here below, you can find the function used for data collection.
 
-*Function*
+[*Function*](FetchFromAPI.m)
 ~~~~
 function [result] = FetchFromAPI( movieTable,n )
 
