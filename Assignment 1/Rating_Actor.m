@@ -18,7 +18,6 @@ All_avg = 0;
 for q = 1:length(y)
     
     Avg_rating = 0;
-    % Other_rating = 0;
     C1 = 0;
     C2 = 0;
     
