@@ -1,5 +1,5 @@
 % Import CSV file into MatLab as table
-M = readtable('movievalue.csv');
+M = readtable('movievalue.csv','delimiter',';');
 
 % Remove $ signs and convert values to doubles
 M.ProductionBudget = strrep(M.ProductionBudget, '$', '');
@@ -15,12 +15,13 @@ M.WorldwideGross = str2double(M.WorldwideGross);
 M.ReleaseDate = datetime(M.ReleaseDate,'InputFormat','MM/dd/yyyy');
 
 % Replace unknown characters
-M.Movie = strrep(M.Movie, '—', '-');
-M.Movie = strrep(M.Movie, '’', char(39));
+M.Movie = strrep(M.Movie, '???', '-');
+M.Movie = strrep(M.Movie, '???', char(39));
 
 % Get information from API and join them to table
 Extension = FetchFromAPI(M,1100);
 M = join(M, Extension);
+M = M(1:1100,:);
 
 %
 figure(1);
@@ -48,3 +49,8 @@ bar(arr(:,1),arr(:,2));
 
 figure(4)
 plot(M.Rank,(M.WorldwideGross+M.DomesticGross));
+
+% x = M.imdbRating;
+% y = M.imdbVotes;
+%scatter(x,y)
+
