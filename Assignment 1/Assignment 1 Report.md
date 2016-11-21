@@ -74,8 +74,6 @@ Here below, you can find the function used for data collection.
 ~~~~
 function [result] = FetchFromAPI( movieTable,n )
 
-function [result] = FetchFromAPI( movieTable,n )
-
 % Initialize variables
 names = movieTable.Movie;
 ryear = year(movieTable.ReleaseDate);
