@@ -51,7 +51,7 @@ By referring to our main code, the Release Date feature is converted to date/tim
 
 1.4 Bonus
 ---------
-It seems like starring one of the following actors in a movie will most likely lead to higher ratings. The code used for this exercise is the following.
+It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following.
 
 [Actor Rating](Rating_Actor.m)
 
