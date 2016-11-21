@@ -50,8 +50,15 @@ figure(4)
 plot(M.Rank(1:n),(M.WorldwideGross(1:n)));
 
 
+
+%Bonus Part
+
+%plot profit / production budget
 figure(9)
+
+%crop initial table to 1200 rows
 T = M(1:n,:);
+% get a set of all PB 
 x = unique(T.ProductionBudget);
 
 A=zeros(length(x),2);
@@ -59,18 +66,67 @@ A=zeros(length(x),2);
 A(:,1) = x;
 
 for i=1:length(x)
+    %find all the movies with a certain PB
     moviesPerBudget = find(T.ProductionBudget == x(i));
     l = length(moviesPerBudget);
     for j = 1:l
-        %calculate the total gross of all movies released that year
+        %calculate the total profit of all movies with the same PB made
         A(i,2) = A(i,2) + T.WorldwideGross(moviesPerBudget(j)) - T.ProductionBudget(moviesPerBudget(j));
     end;
     %calculate the average
     A(i,2) = A(i,2)/l;
 end;
-
-%[Y,I]=sort(A(1,:));
-%B=A(:,I); %use the column indices from sort() to sort all columns of A.
-
+%plot the graph
 bar(A(:,1), A(:,2));
+
+
+figure(10)
+% Convert cell to logical array
+Countries = ~cellfun(@isempty,T.Country);
+
+% Find indices of movies that have a registered country
+k = find(Countries);
+
+y = [];
+
+% get the complete list of countries
+for i=1:length(k)
+    z = strsplit(char(T.Country{k(i)}), ', ');
+    y = [y, z];
+end;
+y = unique(y);
+y = transpose(y);
+z = zeros(size(y));
+zmax = zeros(size(y));
+
+%iterate through all the countries
+for i=1:length(y)
+    %find all movies from a country
+    moviesPerCountry = strfind(T.Country(k), y(i));
+    moviesPerCountry = ~cellfun(@isempty,moviesPerCountry);
+    moviesPerCountry = find(moviesPerCountry);
+    l = length(moviesPerCountry);
+    %iterate through all the movies filmed in a country
+    for j = 1:l
+        
+        if not(isnan(moviesPerCountry(j)))
+            %calculate the total gross of all movies released in that country
+            z(i) = z(i) + T.WorldwideGross(moviesPerCountry(j));
+            if (T.WorldwideGross(moviesPerCountry(j)) > zmax(i))
+                % calculate the maximum gross of all the movies released in
+                % that country
+                zmax(i) = T.WorldwideGross(moviesPerCountry(j));
+            end;
+        end
+    end;
+    %calculate the average
+    z(i) = z(i)/l;
+end;
+
+%plot average profit graph by country
+bar(z);
+%plot max profit grapt by contry
+figure(11)
+bar(zmax);
+
 
