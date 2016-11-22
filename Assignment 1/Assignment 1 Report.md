@@ -45,13 +45,13 @@ By referring to our main code, the Release Date feature is converted to date/tim
   Number of movies released per year
     ![] (images/moviesPerYear.jpg)
     
-    We can observe that an increase in the number of movies, does not necessarily infer an increase in the quality/gross of the movies.
+We can observe that an increase in the number of movies, does not necessarily infer an increase in the quality/gross of the movies.
     
    b)
    Movie rank vs worldwide gross
     ![] (images/RankGross.jpg)
     
-    There is a clear decreasing trend in the graph, with some ups and down that infer that not only the budget is important in making a successful movie. 
+There is a clear decreasing trend in the graph, with some ups and down that infer that not only the budget is important in making a successful movie. 
 
 1.4 Bonus
 ---------
