@@ -77,7 +77,8 @@ B.1) It seems like if one of the following actors starring in a movie, will most
 | 'Noel Appleby' | 8.85 | 6.4 |
 
 B.2) In the following graph, the average profit / production budget is outlined. As we can observe, a greater budget does not necessarily infer a greater profit. 
-   ![] (images/profitPerProductionBudget.jpg)
+   
+![] (images/profitPerProductionBudget.jpg)
 
 B.3) In the following graph the Average Worldwide Gross per country is outlined. As a surprise, the US is not in the top here, which lead us to compute the Maximum Worldwide Gross per country, which also confirmed our suppositions that an US movie had the biggest Gross of them all. 
 
