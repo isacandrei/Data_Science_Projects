@@ -45,21 +45,21 @@ By referring to our main code, the Release Date feature is converted to date/tim
   Number of movies released per year
     ![] (images/moviesPerYear.jpg)
     
-    We can observe that an increase in the number of movies, does not necessarily infer an increase in the quality/gross of the movies.
+We can observe that an increase in the number of movies, does not necessarily infer an increase in the quality/gross of the movies.
     
    b)
    Movie rank vs worldwide gross
     ![] (images/RankGross.jpg)
     
-    There is a clear decreasing trend in the graph, with some ups and down that infer that not only the budget is important in making a successful movie. 
+There is a clear decreasing trend in the graph, with some ups and down that infer that not only the budget is important in making a successful movie. 
 
 1.4 Bonus
 ---------
-A.1. The following graph represents comparison between IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
+A.1) The following graph represents comparison between IMDb's and RottenTomatoes' rating for a given movie. Each value greater than zero means higher rating given by IMDB's users while each value below zero means higher rating given by RottenTomatoes' users. 
     ![] (images/rateDiff.jpg) 
    As seen from the graph IMDb's users tend to be more generous when rating a movie compared to RottenTomatos' users. The reason for such discrepancies is that RottenTomatoes' rating is formed by professional critics while IMDb's ranks are formed by regular users
    
-B.1. It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following. The average rating is calculated of all of the movies that was given within the CSV list and the starring average rating is calculated from all the movies that the actor was starring in.
+B.1) It seems like if one of the following actors starring in a movie, will most likely lead to higher ratings. The code used for this exercise is the following. The average rating is calculated of all of the movies that was given within the CSV list and the starring average rating is calculated from all the movies that the actor was starring in.
 
 [Actor Rating](Rating_Actor.m)
 
@@ -76,10 +76,11 @@ B.1. It seems like if one of the following actors starring in a movie, will most
 | 'Laura Lovelace' | 8.9 | 6.4 |
 | 'Noel Appleby' | 8.85 | 6.4 |
 
-B.2. In the following graph, the average profit / production budget is outlined. As we can observe, a greater budget does not necessarily infer a greater profit. 
-   ![] (images/profitPerProductionBudget.jpg)
+B.2) In the following graph, the average profit / production budget is outlined. As we can observe, a greater budget does not necessarily infer a greater profit. 
+   
+![] (images/profitPerProductionBudget.jpg)
 
-B.3. In the following graph the Average Worldwide Gross per country is outlined. As a surprise, the US is not in the top here, which lead us to compute the Maximum Worldwide Gross per country, which also confirmed our suppositions that an US movie had the biggest Gross of them all. 
+B.3) In the following graph the Average Worldwide Gross per country is outlined. As a surprise, the US is not in the top here, which lead us to compute the Maximum Worldwide Gross per country, which also confirmed our suppositions that an US movie had the biggest Gross of them all. 
 
 ![] (images/averageGrossPerCountry.jpg)
 
