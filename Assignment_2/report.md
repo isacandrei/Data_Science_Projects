@@ -4,5 +4,7 @@ Presentation can also be found here: https://drive.google.com/open?id=16XZlgnAFg
 
 Time Tracking:
 Isac Andrei - Problem Description, Mean Inputation, LOCF
+
 David - Multiple Inputation
+
 Win - Regression imputation, Matching methods
