@@ -25,3 +25,27 @@ xlabel('Age Group')
 ylabel('Number of users')
 
 
+countries = unique(M.country);
+countCountry = zeros(size(countries,1),1);
+for i = 1:size(countries,1)
+    countCountry(i) = height(M(strcmp(M.country, countries(i)), :));
+end
+
+[countCountry, SortIndex] = sort(countCountry,'descend');
+countries = countries(SortIndex);
+
+otherCountries = 0;
+for i = 9:size(countries,1)
+    otherCountries = otherCountries + countCountry(i);
+end
+
+countries = countries(1:10);
+countries(10) = {'Others'};
+countCountry = countCountry(1:10);
+countCountry(10) = otherCountries;
+
+
+figure
+pie(countCountry, countries)
+title('User Country Distribution')
+
