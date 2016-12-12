@@ -29,3 +29,8 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 **1)**
 
 **2)**
+
+3. Bibliography
+-------------------------------------------
+[1] C. Creighton and S. Hanash, “Mining gene expression databases of association rules,” Oxford University Press, vol. 19, no. 1, pp. 79–86, 2003.
+[2] TiersLab.com, "SNO1 - SNZ1 Interaction Summary", 2016, Available at https://thebiogrid.org/interaction/237709/sno1-snz1.html
