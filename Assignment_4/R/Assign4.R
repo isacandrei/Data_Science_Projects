@@ -9,11 +9,16 @@ mydata<-fread("usersha1-artmbid-artname-plays.tsv")
 #remove all which have number of plays == 1
 mydata<-mydata[mydata$V4>1]
 
+#Replace wrong characters
 mydata <- lapply(mydata, gsub, pattern = "&", replacement = "and", fixed = TRUE)
-mydata <- lapply(mydata, gsub, pattern = "Ã©", replacement = "e", fixed = TRUE)
-mydata <- lapply(mydata, gsub, pattern = "Ã–", replacement = "o", fixed = TRUE)
-mydata <- lapply(mydata, gsub, pattern = "Å¼", replacement = "Z", fixed = TRUE)
-
+mydata <- lapply(mydata, gsub, pattern = "????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "?????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "?????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "????", replacement = "??", fixed = TRUE)
+mydata <- lapply(mydata, gsub, pattern = "????", replacement = "??", fixed = TRUE)
 
 url_pattern <- "(( -)|(((.-\\ +?)www)|((.-+?)www)|((\\ +?)www)|((.\\(+?)www)).*)"
 
@@ -29,7 +34,7 @@ txn <- as(i, "transactions")
 itemFrequencyPlot(txn, topN = 25)
 
 #run the algorithm 
-basket_rules<-apriori(txn,parameter=list(sup=0.01,conf=0.6,target="rules",maxlen=5))
+basket_rules<-apriori(txn,parameter=list(sup=0.01,conf=0.6,target="rules",maxlen=5))my
 
 plot(head(basket_rules,by="lift",20), method="grouped")
 
