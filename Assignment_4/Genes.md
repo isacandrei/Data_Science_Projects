@@ -27,3 +27,9 @@ As we can observe, multiple genes occur in more than one itemset, while looking 
 |ALG11-high	IDP2-high	ZRT1-low|
 |YIL137C-high	SCD6-high	ZRT1-low|
 |YIL137C-high	YPL022W-high	ZRT1-low|
+
+From the scalability point of view, detecting large frequent item sets is computationally expensive, the greater the number of items the more computational time is needed. In order to reduce the time needed to get the results, the minimum confindence and /or minimum support can be increased. From the initial setup, of 0.1 support and 0.8 confidence, we hav eincreased the minimum support to 0.15 in order to get 6 items sets, with the initial setup maximum 3 items were found in a set. In both cases 10000 rules were mined. In order to generate large data sets the apriori algorithm needs to finish the rule computations for the previous frequent itemsets (lower size) in order to be able to look into greater itemsets, there is no way to limit the maximum set size for the LHS or RHS. 
+
+## 2.2 Strong association rules
+
+
