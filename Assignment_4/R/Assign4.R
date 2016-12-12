@@ -1,7 +1,6 @@
 library(data.table)
 library(arules)
 library(arulesViz)
-library(qdapRegex)
 
 
 mydata<-fread("usersha1-artmbid-artname-plays.tsv")
@@ -42,5 +41,10 @@ plot(head(basket_rules_broad,by="lift",20), method="grouped")
 #plot(head(basket_rules_broad,by="lift",20), method="grouped")
 
 #inspectDT(head(basket_rules_broad,by="lift"))
-beethoven_rules<-apriori(txn,parameter=list(sup=0.01,conf=0.6,target="rules",maxlen=5),appearance=list(lhs=c("beethoven"),default="rhs"))
+beethoven_subset<- subset( basket_rules_broad, subset = lhs %pin% "ludwig van beethoven" ) 
+plot(head(beethoven_subset,by="lift",100), method="grouped")
 
+
+killers_subset<- subset( basket_rules_broad, subset = rhs %pin% "the killers" ) 
+plot(head(killers_subset,by="confidence",20), method="graph")
+plot(head(killers_subset,by="confidence",20), method="grouped")
