@@ -14,7 +14,11 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 [*last.fm R Script*](R/Assign4.R)
 
-**1)** To clean the data set, we removed all rows that contains only 1 play for an artist, taking into consideration that a user may mistakenly played a song or was just browsing through the library. Also, when reading the data set into our environment, R misreads certain characters in the data set, which we have replaced most of them to the correct ASCII characters. We also realised that there are a few URL's in the artist name column, therefore these were also removed.
+**1)** To clean the data set, we removed all rows that contains only 1 play for an artist, taking into consideration that a user may mistakenly played a song or was just browsing through the library. Also, when reading the data set into our environment, R misreads certain characters in the data set, which we have replaced most of them to the correct ASCII characters. We also realised that there are a few URL's in the artist name column, therefore these were also removed. By analyzing the user data set, we have came up with the 2 following distributions for age group and country.
+
+![] (images/Age_Distribution.png)
+
+![] (images/User_Country_Distribution.png) 
 
 **2)**
 
@@ -29,8 +33,3 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 **1)**
 
 **2)**
-
-3. Bibliography
--------------------------------------------
-[1] C. Creighton and S. Hanash, “Mining gene expression databases of association rules,” Oxford University Press, vol. 19, no. 1, pp. 79–86, 2003.
-[2] TiersLab.com, "SNO1 - SNZ1 Interaction Summary", 2016, Available at https://thebiogrid.org/interaction/237709/sno1-snz1.html
