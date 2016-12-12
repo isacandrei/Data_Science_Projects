@@ -2,7 +2,6 @@ library(data.table)
 library(arules)
 library(arulesViz)
 
-
 mydata<-fread("usersha1-artmbid-artname-plays.tsv")
 
 #since some user may have played certain artist by accident or just browsing
