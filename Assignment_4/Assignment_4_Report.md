@@ -10,6 +10,18 @@ Assignment 4 (Group 16)
 
 1. Beethoven and The Killers
 ----------------------------
+**1)**
 
-1.2 Understanding Cellular Function With AR
+**2)**
+
+**3)**
+
+**4)**
+
+**5)**
+
+2. Understanding Cellular Function With AR
 -------------------------------------------
+**1)**
+
+**2)**
