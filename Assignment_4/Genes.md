@@ -18,8 +18,9 @@ In order to generate big or relatively big itemsets in reasonable time, we hase 
 |{SCD6	CTP1	YCL019W	YJL154C	YJR110W	ORC3}|
 
 As we can observe, multiple genes occur in more than one itemset, while looking at the whole frequent itemsets, most of the genes occur in more than 5 itemsets. In order to add some value to this analysys, from our initial analysis, with both underexpressed and overexpressed genes, we have foun some frequent itemsets that contain both, unfortunately because fo the computationally expensive algorithm only itemsets of size 3 were found:
+
 |Frequent Itemsets All|
-|---------------|
+|-----------------------|
 |ALG11-high	YPL022W-high	ZRT1-low|
 |ALG11-high	PTP3-high	ZRT1-low|
 |ALG11-high	ORC3-high	ZRT1-low|
