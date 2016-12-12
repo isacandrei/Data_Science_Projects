@@ -7,17 +7,9 @@ Assignment 4 (Group 16)
 
 **December 13, 2016**
 
+
 1. Beethoven and The Killers
-=============================
+----------------------------
 
-1.1 Collect it...Link it!
--------------------------
-
-1.2 Types
----------
-
-1.3 Data Science Projects
--------------------------
-
-1.4 Bonus
----------
+1.2 Understanding Cellular Function With AR
+-------------------------------------------
