@@ -1,4 +1,4 @@
-function [Rules FreqItemsets] = findRules(transactions, minSup, minConf, nRules, sortFlag, labels, fname)
+function [Rules FreqItemsets, RuleConf, RuleSup] = findRules(transactions, minSup, minConf, nRules, sortFlag, labels, fname)
 %
 % This function performs Association Analysis (Apriori Algorithm):  Given a set of transactions,
 % find rules that will predict  the occurrence of an item based on the occurrences of other
