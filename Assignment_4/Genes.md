@@ -31,5 +31,37 @@ As we can observe, multiple genes occur in more than one itemset, while looking 
 From the scalability point of view, detecting large frequent item sets is computationally expensive, the greater the number of items the more computational time is needed. In order to reduce the time needed to get the results, the minimum confindence and /or minimum support can be increased. From the initial setup, of 0.1 support and 0.8 confidence, we hav eincreased the minimum support to 0.15 in order to get 6 items sets, with the initial setup maximum 3 items were found in a set. In both cases 10000 rules were mined. In order to generate large data sets the apriori algorithm needs to finish the rule computations for the previous frequent itemsets (lower size) in order to be able to look into greater itemsets, there is no way to limit the maximum set size for the LHS or RHS. 
 
 ## 2.2 Strong association rules
+In order to get these results we have set the minimum support to 0.1 and minimum confidence to 0.8. The rules which wave over 20% support are shown below:
 
+```
+Rule   (Support, Confidence)
+Gene SNO1 high -> Gene SNZ1 high  (30%, 87.3786%)
+Gene SNZ1 high -> Gene SNO1 high  (30%, 87.3786%)
+Gene CTF13,CBF3C high -> Gene SNZ1 high  (25%, 97.4026%)
+Gene CTF13,CBF3C high -> Gene SNO1 high  (24.3333%, 94.8052%)
+Gene YER175C high -> Gene SNZ1 high  (23%, 95.8333%)
+Gene YER175C high -> Gene SNO1 high  (22.3333%, 93.0556%)
+Gene YGL117W high -> Gene SNZ1 high  (22%, 98.5075%)
+Gene SPL2 low -> Gene PHO84 low  (22%, 89.1892%)
+Gene PHO84 low -> Gene SPL2 low  (22%, 83.5443%)
+Gene YBR047W high -> Gene SNZ1 high  (21.6667%, 91.5493%)
+Gene YER175C high -> Gene CTF13,CBF3C high  (20.6667%, 86.1111%)
+Gene CTF13,CBF3C high -> Gene YER175C high  (20.6667%, 80.5195%)
+Gene PCL5 high -> Gene SNZ1 high  (20.6667%, 88.5714%)
+Gene YPL033C high -> Gene SNO1 high  (20.3333%, 91.0448%)
+Gene YBR047W high -> Gene SNO1 high  (20.3333%, 85.9155%)
+Gene CPA2 high -> Gene SNZ1 high  (20.3333%, 95.3125%)
+Gene YGL117W high -> Gene SNO1 high  (20%, 89.5522%)
+Gene CPA2 high -> Gene SNO1 high  (20%, 93.75%)
+Gene YOL118C high -> Gene SNO1 high  (20%, 88.2353%)
+Gene YGL117W high -> Gene SNO1 high,Gene SNZ1 high  (20%, 89.5522%)
+Gene YGL117W high,Gene SNO1 high -> Gene SNZ1 high  (20%, 100%)
+Gene YGL117W high,Gene SNZ1 high -> Gene SNO1 high  (20%, 90.9091%)
+```
+
+We can observe that the genes SNO1 and SNZ1 imply each other and are present in almost all the rules. The rules would have been much more qualitative if bigger sized itemsets woulb be available, infortunately not possible due to computational overhead and time limits.
+
+As a confirmation our our results, in paper [1] we have the following list of frequent genes: `CTF13, HIS5, LYS1, RIB5, SNO1, SNZ1, SRY1, YBR047W, YHR029C, and YOL118C`. We can confirm that the genes `CTF13, SNO1, SNZ1, YBR047W, YOL118C` also take part of our found top association rules. 
+
+In [2] we have a confirmation that the first 2 association rules are already known. 
 
