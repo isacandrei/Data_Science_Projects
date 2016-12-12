@@ -101,3 +101,11 @@ In [2] we have a confirmation that the first 2 association rules are already kno
 [1] C. Creighton and S. Hanash, “Mining gene expression databases of association rules,” Oxford University Press, vol. 19, no. 1, pp. 79–86, 2003.
 
 [2] TiersLab.com, "SNO1 - SNZ1 Interaction Summary", 2016, Available at https://thebiogrid.org/interaction/237709/sno1-snz1.html
+
+
+4. Time Tracking
+----------------------------
+| Andrei | 1.1 Graphs, General Help on 1, Full ex 2 |
+|--------|------------------------------------------|
+|        |                                          |
+|        |                                          |
