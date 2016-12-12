@@ -12,6 +12,8 @@ Assignment 4 (Group 16)
 ----------------------------
 For this assignment, we have decided the choose to use last.fm dataset. It is good to note that we initially tried using MatLab with this dataset, but sadly MatLab isn't able to handle big data. Therefore, for this exercise, we have decided to use R which performed much better with this large dataset with reasonable computational time.
 
+[*last.fm R Script*](R/Assign4.R)
+
 **1)**
 
 **2)**
