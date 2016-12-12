@@ -20,7 +20,7 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 ![] (images/User_Country_Distribution.png) 
 
-**2)** Before generating the association rules, we needed to split the data set into transactions. In our case, we will consider each user a transaction where as each artist will then be the "items". Then we executed the "apriori" function from the "arules" library with a minimum support of 1%, a minimum confidence of 60% and maximum items is 5. Below, you may find the an interactive table of association rules generated with the apriori function.
+**2)** Before generating the association rules, we needed to split the data set into transactions. In our case, we will consider each user a transaction where as each artist will then be the "items". Then we executed the "apriori" function from the "arules" library with a minimum support of 1%, a minimum confidence of 60% and maximum items is 5. Below, you may find the an interactive table (HTML page) of association rules generated with the apriori function.
 
 [*Association Rules*](R/images/basket_rules.html)
 
