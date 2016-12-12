@@ -52,15 +52,15 @@ end
 %     end
 % end
 
-consider only the overexpressed genes
+%consider only the overexpressed genes
 newMatrix = matrix(:, (1:noGenes));
 labelsUp = labels(:,(1:noGenes));
 
-minSup = 0.1;
+minSup = 0.15;
 minConf = 0.8;
 nRules = 10000;
 sortFlag = 1;
-fname = 'GenesRulesUp'; 
+fname = 'GenesRulesUp2'; 
 
 tic; %Measure time needed to run code
 
