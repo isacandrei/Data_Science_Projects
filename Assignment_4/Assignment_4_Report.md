@@ -20,7 +20,9 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 ![] (images/User_Country_Distribution.png) 
 
-**2)**
+**2)** Before generating the association rules, we needed to split the data set into transactions. In our case, we will consider each user a transaction where as each artist will then be the "items". Then we executed the "apriori" function from the "arules" library with a minimum support of 1%, a minimum confidence of 60% and maximum items is 5. Below, you may find the an interactive table of association rules generated with the apriori function.
+
+[*Association Rules*](R/images/basket_rules.html)
 
 **3)**
 
@@ -30,9 +32,9 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 2. Understanding Cellular Function With AR
 -------------------------------------------
-Due to the smaller data set, this exercise is feasible in Matlab. In order to solve the exercise, the provided script `findrules.m` was used. The available data consists of 300 columns, representing the transactions (300 experiments, different gene expression profiles) and `6204 rows` representing the items, representing the genes. The difference from exercise 1 is that one item does not have only two states (bought or not bought / `{0,1}`), but insteat has 3 states (underexpressed, neutral, overexpressed / `{-1,0,1}`). As stated in the provided paper [1], the most important results represent overexpressed genes, underexpressed genes being in minority. 
+Due to the smaller data set, this exercise is feasible in Matlab. In order to solve the exercise, the provided script `findrules.m` was used. The available data consists of 300 columns, representing the transactions (300 experiments, different gene expression profiles) and `6204 rows` representing the items, representing the genes. The difference from exercise 1 is that one item does not have only two states (bought or not bought / `{0,1}`), but instead has 3 states (underexpressed, neutral, overexpressed / `{-1,0,1}`). As stated in the provided paper [1], the most important results represent overexpressed genes, underexpressed genes being in minority. 
 
-We aim to verify the previous assumptions by preparing the initial data to be processed by the algorithm. Because the algorithm accepts only a binary matrix, we propose the folowing solution. De duplicate each gene e.g. `YMR095C -> {YMR095C high, YMR095C low}` `({-1,0,1} -> {{0,1},{0,1}})`, in this way we will have a binary matrix of '300 transactions x 12408 items'. Note that the data resulted from this analysis does no provide any valuable output in terms of support and confidence. The result confirmed the initial assumption, because from the generated 1000 rules, none included an underexpressed gene. 
+We aim to verify the previous assumptions by preparing the initial data to be processed by the algorithm. Because the algorithm accepts only a binary matrix, we propose the folowing solution. De duplicate each gene e.g. `YMR095C -> {YMR095C high, YMR095C low}` `({-1,0,1} -> {{0,1},{0,1}})`, in this way we will have a binary matrix of '300 transactions x 12408 items'. Note that the data resulted from this analysis does not provide any valuable output in terms of support and confidence. The result confirmed the initial assumption, because from the generated 1000 rules, none included an underexpressed gene. 
 
 After the above short analysis we can conclude that is safe to perform the further analysis only on overexpressed genes. The binary matrix that is constructed in order to be processed by the algoritm is build by the folowing formula: `M(i,j) = 1 if the corerspoding transcript of protein is larger than 0.2`.
 
