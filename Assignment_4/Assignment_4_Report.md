@@ -95,6 +95,9 @@ As a confirmation our our results, in paper [1] we have the following list of fr
 
 In [2] we have a confirmation that the first 2 association rules are already known. 
 
+[*Genes Matlab Script*](genes.m)
+
+[*OverExpressedRules*](GenesRulesUp.txt)
 
 3. Bibliography
 -------------------------------------------
