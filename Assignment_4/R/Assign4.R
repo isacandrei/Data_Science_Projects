@@ -1,3 +1,6 @@
+install.packages("data.table")
+install.packages("arules")
+install.packages("arulesViz")
 library(data.table)
 library(arules)
 library(arulesViz)
