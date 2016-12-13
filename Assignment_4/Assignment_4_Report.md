@@ -115,8 +115,8 @@ In [2] we have a confirmation that the first 2 association rules are already kno
 
 4. Time Tracking
 ----------------------------
-|   Name |                 Work                     |
-|--------|------------------------------------------|
-| Andrei | 1.1 Graphs, General Help on 1, Full ex 2 |
-|        |                                          |
-|        |                                          |
+|   Name |                 Work                           |
+|--------|------------------------------------------------|
+| Andrei | 1.1 Graphs, General Help on 1, Full ex 2       |
+| Win    | Exercise 1 in MatLab test and partial R script |
+|        |                                                |
