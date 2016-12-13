@@ -27,9 +27,11 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 ![] (R/images/Rplot-con-0_6-sup-0_01-bylift.png)
 
-Here, you can see a plot where user that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
+Here, you can see a plot where users that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
 
-**3)**
+**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS.
+
+![] (R/images/Rplot02-beethoven.png)
 
 **4)**
 
