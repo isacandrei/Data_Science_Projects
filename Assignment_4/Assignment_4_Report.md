@@ -29,11 +29,15 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 Here, you can see a plot where users that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
 
-**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS.
+**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the lift.
+
+[*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
 ![] (R/images/Rplot02-beethoven.png)
 
-**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present.
+**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift.
+
+[*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
 ![] (R/images/Rplot02-killers.png)
 
