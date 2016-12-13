@@ -24,7 +24,11 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 [*Association Rules*](R/images/basket_rules.html)
 
+![] (R/images/Rplot03.png)
+
 ![] (R/images/Rplot-con-0_6-sup-0_01-bylift.png)
+
+Here, you can see a plot where user that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
 
 **3)**
 
