@@ -9,7 +9,7 @@ Assignment 4 (Group 16)
 
 1. Beethoven and The Killers
 ----------------------------
-For this assignment, we have decided the choose to use last.fm data set. It is good to note that we initially tried using MatLab with this data set, but sadly MatLab isn't able to handle big data. Therefore, for this exercise, we have decided to use R which performed much better with this large dataset with reasonable computational time.
+For this assignment, we have decided the choose to use last.fm data set. It is good to note that we initially tried using MatLab with this data set, but sadly MatLab isn't able to handle big data. Because we have 360k users in our data set which will be considered as transactions and about 200k artist. By using the Association Rules package, we would need to generate a binary matrix which will be 360k by 200k. MatLab doesn't support a matrix this large. Therefore, for this exercise, we have decided to use R which performed much better with this large data set with reasonable computational time.
 
 [*last.fm R Script*](R/Assign4.R)
 
@@ -29,13 +29,13 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 Here, you can see a plot where users that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
 
-**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the lift.
+**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the lift, because higher lift means higher correlation between the LHS and the RHS. A minimum support of 0.001 and a minimum confidence of 0.5 was used to generate this table.
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
 ![] (R/images/Rplot02-beethoven.png)
 
-**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift. When using the interactive table, we can conclude that the 5 artists that will come up on the questionnaire would be: **razorlight, the bravery, kaiser chiefs, keane and the fratellis**.
+**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift, because a higher lift means a higher correlation between the LHS and the RHS.  When using the interactive table, we can conclude that the 5 artists that will come up on the questionnaire would be: **razorlight, the bravery, kaiser chiefs, keane and the fratellis**.
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
