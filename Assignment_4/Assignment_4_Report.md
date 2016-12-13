@@ -35,13 +35,16 @@ Here, you can see a plot where users that listen to artists on the LHS, will mos
 
 ![] (R/images/Rplot02-beethoven.png)
 
-**4)** Once again we are going to use the broader result set (support=0.001 and confidence =0.5) in order to analyze more results. To look for users that will most likely The Killers, we will filter out the association rules, that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Another approach could be to create a query among our friends about a range of artists based on the results from the analysis. A possible set could be to mix it up by including the artist with the highest support - Kaiser Chiefs,the artist with the lowest lift - Athlete, the highest lift - Razorlight, an artist with small support - Snow Patrol and another one with high support - Keane. By mixing it up and having examples ofrom the most of the available options one can easily make prediction about the preferences of his friends like whether they listen to more commercial artists or not, or prefer certain combination of artists. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift.
+**4)** Once again we are going to use the broader result set (support=0.001 and confidence =0.5) in order to analyze more results. To look for users that will most likely The Killers, we will filter out the association rules, that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Another approach could be to create a query among our friends about a range of artists based on the results from the analysis. A possible set could be to mix it up by including the artist with the highest support - Kaiser Chiefs,the artist with the lowest lift - Athlete, the highest lift - Razorlight, an artist with small support - Snow Patrol and another one with high support - Keane. By mixing it up and having examples ofrom the most of the available options one can easily make prediction about the preferences of his friends like whether they listen to more commercial artists or not, or prefer certain combination of artists. Another available option would be to choose the rules which have highest lift. By doing this we know that if one of our friends really enjoys listening to these groups he will most cerainly appreciate the gift. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift.
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
 ![] (R/images/Rplot02-killers.png)
 
-**5)**
+**5)** In order to impress our friends another approach should be used. If we want to impress them we should use something which is not so popular but at the same time is possible to be liked by them. In this case a possible solution to observe the rules with least support and pick some of them with relatively higher confidence.
+
+![] (R/images/Rplot-least-support)
+
 
 2. Understanding Cellular Function With AR
 -------------------------------------------
