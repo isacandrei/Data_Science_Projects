@@ -29,15 +29,18 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 Here, you can see a plot where users that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
 
-**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the confidence, because then we can see how often an artist is listened if they had listened to Beethoven. A minimum support of 0.001 and a minimum confidence of 0.5 was used to generate this table. Therefore, in this case, people listening to "Beethoven" will most likely also listen to "Bach".
+**3)** By looking for recommendations for our friend, we have tuned the apriori algorithm parameters a bit. In order to have more "intersting" rule set some modifications had to be made. For the results the apriori algorithm was executed for suppport = 0.001 and confidence = 0.5. By doing this a more extensive rule set is generated and some results which were previously missed are now available for observation. On the LHS the results had to be filtered to include "ludwig van beethoven" in order to analyze only the results which are relevant to our subject of interest.As a result some artists like The Beatles came up. Here below, you may find the some other artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the lift.
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
 ![] (R/images/Rplot02-beethoven.png)
 
-**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift, because a higher lift means a higher correlation between the LHS and the RHS.  When using the interactive table, we can conclude that the 5 artists that will come up on the questionnaire would be: **razorlight, the bravery, kaiser chiefs, keane and the fratellis**.
+**4)** Once again we are going to use the broader result set (support=0.001 and confidence =0.5) in order to analyze more results. To look for users that will most likely The Killers, we will filter out the association rules, that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Another approach could be to create a query among our friends about a range of artists based on the results from the analysis.A possible set could be to mix it up by including the artist with the highest support - Kaiser Chiefs,the artist with the lowest lift - Athlete,the highest lift - Razorlight,an artist with small support - Snow Patrol and another one with high support - Keane. By mixing it up and having examples ofrom the most of the available options one can easily make prediction about the preferences of his friends like whether they listen to more commercial artists or not, or prefer certain combination of artists. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift.
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
+
+![] (R/images/Rplot02-killers.png)
+
 
 ![] (R/images/Rplot02-killers.png)
 
