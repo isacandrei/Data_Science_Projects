@@ -35,7 +35,7 @@ Here, you can see a plot where users that listen to artists on the LHS, will mos
 
 ![] (R/images/Rplot02-beethoven.png)
 
-**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift.
+**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present. Here, you can also use the interactive table to get the association rules by filtering for The Killers on the RHS and sort descending by lift. When using the interactive table, we can conclude that the 5 artists that will come up on the questionnaire would be: **razorlight, the bravery, kaiser chiefs, keane and the fratellis**.
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
