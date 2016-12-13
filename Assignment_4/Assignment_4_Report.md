@@ -9,7 +9,7 @@ Assignment 4 (Group 16)
 
 1. Beethoven and The Killers
 ----------------------------
-For this assignment, we have decided the choose to use last.fm data set. It is good to note that we initially tried using MatLab with this data set, but sadly MatLab isn't able to handle big data. Because we have 360k users in our data set which will be considered as transactions and about 200k artist. By using the Association Rules package, we would need to generate a binary matrix which will be 360k by 200k. MatLab doesn't support a matrix this large. Therefore, for this exercise, we have decided to use R which performed much better with this large data set with reasonable computational time.
+For this assignment, we have decided the choose to use last.fm data set. It is good to note that we initially tried using MatLab with this data set, but sadly MatLab isn't able to handle big data. Because we have 360k users in our data set which will be considered as transactions and about 200k artist. By using the Association Rules package, we would need to generate a binary matrix which will be 360k by 200k. MatLab doesn't support a matrix this large. Therefore, for this exercise, we have decided to use R which performed much better with this large data set with reasonable computational time. In order to (almost) perfectly clean the data, firstly we have tried the LastFM API which has a artist correction endpoint, where we could have gotten the correct MBID for all the artists. Unfortunately the API was resuest limited to 1 request / secont, therefore we did not use it. 
 
 [*last.fm R Script*](R/Assign4.R)
 
