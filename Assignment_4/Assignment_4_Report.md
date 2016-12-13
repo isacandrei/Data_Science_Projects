@@ -33,7 +33,9 @@ Here, you can see a plot where users that listen to artists on the LHS, will mos
 
 ![] (R/images/Rplot02-beethoven.png)
 
-**4)**
+**4)** To look for users that will most likely The Killers, we will filter out the association rules that contains The Killer on the RHS therefore we can get an overview which of my Facebook friends that most likely listens to artists on the LHS, will probably like The Killers as a present.
+
+![] (R/images/Rplot02-killers-grouped.png)
 
 **5)**
 
