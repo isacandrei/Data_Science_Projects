@@ -41,7 +41,7 @@ Here, you can see a plot where users that listen to artists on the LHS, will mos
 
 ![] (R/images/Rplot02-killers.png)
 
-**5)** In order to impress our friends another approach should be used. If we want to impress them we should use something which is not so popular but at the same time is possible to be liked by them. In this case a possible solution to observe the rules with least support and pick some of them with relatively higher confidence.
+**5)** In order to impress our friends another approach should be used. If we want to impress them we should use something which is not so popular but at the same time is possible to be liked by them. In this case a possible solution to observe the rules with least support and pick some of them with relatively higher confidence. Based on the music preferences a really good playlist could be created which does not made up from the most popular artists on the radio. 
 
 ![] (R/images/Rplot-least-support)
 
