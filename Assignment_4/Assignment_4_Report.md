@@ -29,7 +29,7 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 Here, you can see a plot where users that listen to artists on the LHS, will most likely listen to artists on the RHS. The size of the circle is based on the support value and the color is based on the lift. These rules are sorted by the lift.
 
-**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the lift, because higher lift means higher correlation between the LHS and the RHS. A minimum support of 0.001 and a minimum confidence of 0.5 was used to generate this table.
+**3)** By looking for recommendations for our friend, we have filter out the data set with transactions that contains "ludwig van beethoven" and then generate the association rules from the transactions. Here below, you may find the artists that you can impress your friend with on the RHS. To get the association rules, we can also use the interactive table to filter for "ludwig van beethoven" on the LHS and then sort descending by the confidence, because then we can see how often an artist is listened if they had listened to Beethoven. A minimum support of 0.001 and a minimum confidence of 0.5 was used to generate this table. Therefore, in this case, people listening to "Beethoven" will most likely also listen to "Bach".
 
 [*Association Rules with whole data set*](R/images/basket_rules_broad.html)
 
