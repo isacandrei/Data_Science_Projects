@@ -24,6 +24,8 @@ For this assignment, we have decided the choose to use last.fm data set. It is g
 
 [*Association Rules*](R/images/basket_rules.html)
 
+![] (R/images/Rplot-con-0_6-sup-0_01-bylift.png)
+
 **3)**
 
 **4)**
