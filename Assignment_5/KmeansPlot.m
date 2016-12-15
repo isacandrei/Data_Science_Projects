@@ -1,6 +1,11 @@
-result=kmeans([e02,e03,e04],4);
-scatter3(e02(find(result==1)),e03(find(result==1)),e04(find(result==1)))
+function KmeansPlot(inputdata,k)
+close all;
+result=kmeans(inputdata,k);
+[m,n]=size(inputdata);
+if n==3
 hold on;
-scatter3(e02(find(result==2)),e03(find(result==2)),e04(find(result==2)))
-scatter3(e02(find(result==3)),e03(find(result==3)),e04(find(result==3)))
-scatter3(e02(find(result==4)),e03(find(result==4)),e04(find(result==4)))
+for i=1:k
+idx=find(result==i);
+scatter3(inputdata(idx,1),inputdata(idx,2),inputdata(idx,3));
+end;
+end;
