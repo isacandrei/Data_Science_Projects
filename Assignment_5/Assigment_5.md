@@ -32,3 +32,9 @@ The matlab `evalclusters`matlab eval clusters
 ![] (Rplot03.png)
 
 #### 1.5 ,complete - larger variance between clusters , ward - 
+
+2. K-Means Clustering
+----------------------------
+
+3. Gaussian Mixture Model
+----------------------------
