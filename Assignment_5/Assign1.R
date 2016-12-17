@@ -1,8 +1,16 @@
 #Load into data into environment
-data <- read.table("start_3d.txt")
+library("clustertend")
+
+data <- read.table("stars_6d.txt")
+
+hopkins(data,n=1000)
+
+data <- read.table("stars_3d.txt")
+
+hopkins(data,n=1000)
 
 #Determine distance matrix
-d <- dist(data, method="euclidean")
+#d <- dist(data, method="euclidean")
 
 #Cluster for dendogram
-fit <- hclust(d, method="ward")
+#fit <- hclust(d, method="ward")
