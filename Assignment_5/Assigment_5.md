@@ -104,4 +104,4 @@ It is clear that each initialization method gives different results. In order to
 
 3. Gaussian Mixture Model
 ----------------------------
-[comment]: <> (This is a comment, it will not be included)
+<!--- test --->
