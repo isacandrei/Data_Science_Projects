@@ -62,12 +62,15 @@ In order to select the best possible K some evaluation should be performed. The 
   
  After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
  
-<!--(Initial results)-->
+![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
 In order to get more precise results the next step is to explore this region. To get these results the above described iteration is repeated, this time for K in the interval between 20-40. The following plot shows the results from the iteration.
  
-<!--(3D graph + silhouette)-->
-As a result the value of K which minimizes the value of SSE is 25.
+![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
+
+![](images/silhouette_3d_25_clusters.jpg)
+
+As a result the value of K which minimizes the value of SSE is 25 which is confirmed by the silhouette plot.
  
 <!--(6D graph + silhouette) -->
 
@@ -76,7 +79,8 @@ For the 6D data the it is 54.
 2.4. Different distances of measure
 In order to achieve better results different measures can be used. The performance of the algorithm 
 ###Squared Euclidean
-<!--[comment] : <> (Squared euclidean 3d) -->
+
+![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 <!--[comment] : <> (Squared euclidean 6d)-->
 
 ###Cosine
