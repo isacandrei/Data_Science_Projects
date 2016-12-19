@@ -62,26 +62,26 @@ In order to select the best possible K some evaluation should be performed. The 
   
  After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
  
-[comment] : <> (Initial results)
+<!--(Initial results)-->
 
 In order to get more precise results the next step is to explore this region. To get these results the above described iteration is repeated, this time for K in the interval between 20-40. The following plot shows the results from the iteration.
  
-[comment] : <> (3D graph + silhouette)
+<!--(3D graph + silhouette)-->
 As a result the value of K which minimizes the value of SSE is 25.
  
-[comment] : <> (6D graph + silhouette)
+<!--(6D graph + silhouette) -->
 
 For the 6D data the it is 54.
 
 2.4. Different distances of measure
 In order to achieve better results different measures can be used. The performance of the algorithm 
 ###Squared Euclidean
-[comment] : <> (Squared euclidean 3d)
-[comment] : <> (Squared euclidean 6d)
+<!--[comment] : <> (Squared euclidean 3d) -->
+<!--[comment] : <> (Squared euclidean 6d)-->
 
 ###Cosine
-[comment] : <> (Cosine 3d)
-[comment] : <> (Cosine 6d)
+<!--[comment] : <> (Cosine 3d) -->
+<!--[comment] : <> (Cosine 6d)-->
 
 ###SquaredEuclidean
 2.5. Cluster prototype initialization
@@ -89,16 +89,16 @@ The initialization of the prototypes is of high importance in kmeans. A proper i
 There are different initialization methods such as : selecting k observations at random, selecting uniformly k observations at random, performing preliminary clustering of the data, etc.
 
 ###Cluster
-[comment] : <> (Cluster 3d)
-[comment] : <> (Cluster 6d)
+<!--[comment] : <> (Cluster 3d)-->
+<!--[comment] : <> (Cluster 6d)-->
 
 ###Sample
-[comment] : <> (Sample 3d)
-[comment] : <> (Sample 6d)
+<!--[comment] : <> (Sample 3d)-->
+<!--[comment] : <> (Sample 6d)-->
 
 ###Uniform
-[comment] : <> (Uniform 3d)
-[comment] : <> (Uniform 6d)
+<!--[comment] : <> (Uniform 3d)-->
+<!--[comment] : <> (Uniform 6d)-->
 
 It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made.
 
