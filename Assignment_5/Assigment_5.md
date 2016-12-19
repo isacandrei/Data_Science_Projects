@@ -64,9 +64,9 @@ In order to select the best possible K some evaluation should be performed. The 
  
 ![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
-In order to get more precise results the next step is to explore this region. To get these results the above described iteration is repeated, this time for K in the interval between 20-40. The following plot shows the results from the iteration.
+In order to get more precise results the next step is to explore this region. To get these results the above described iteration is repeated, this time for K in the interval between 20-40. The following plots shows the results from the iteration.
  
-![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
+![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-20_40.jpg)
 
 ![](images/silhouette_3d_25_clusters.jpg)
 
