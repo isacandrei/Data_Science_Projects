@@ -85,7 +85,9 @@ In order to achieve better results different measures can be used. The performan
 ![6D Data](images/data_6d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
 ###Cosine
+3D Data
 ![3D Data](images/data_3d_l-0_1_meth-plus_dist-cosine_clust-2_102.jpg)
+6D Data
 ![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-40_60.jpg)
 
 ###SquaredEuclidean
@@ -94,19 +96,25 @@ The initialization of the prototypes is of high importance in kmeans. A proper i
 There are different initialization methods such as : selecting k observations at random, selecting uniformly k observations at random, performing preliminary clustering of the data, etc.
 
 ###Cluster
+3D Data
 ![3D Data](images/data_3d_l-0_1_meth-cluster_dist-sq_eucl_clust-2_102.jpg)
+6D Data
 ![6D Data](images/data_6d_l-0_1_meth-cluster_dist-sq_eucl_clust-40_60.jpg)
 
 
 ###Sample
+3D Data
 ![3D Data](images/data_3d_l-0_1_meth-sample_dist-sq_eucl_clust-2_102.jpg)
+6D Data
 ![6D Data](images/data_6d_l-0_1_meth-sample_dist-sq_eucl_clust-40_60.jpg)
 
 ###Uniform
+3D Data
 ![3D Data](images/data_3d_l-0_1_meth-uniform_dist-sq_eucl_clust-2_102.jpg)
+6D Data
 ![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
 
-It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made.
+It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results.
 
 3. Gaussian Mixture Model
 ----------------------------
