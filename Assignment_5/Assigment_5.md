@@ -62,7 +62,8 @@ In order to select the best possible K some evaluation should be performed. The 
   5.The final value of SSE represents the average result from running the process 50 times for each cluster size.
   
 After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
- 
+
+Thw following results are obtained by using kmeans++ initialization and squared euclidean distance : 
 ![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
 In order to get more precise results the next step is to explore this region. To get these results the above described iteration is repeated, this time for K in the interval between 20-40. The following plots shows the results from the iteration.
@@ -88,7 +89,7 @@ In order to achieve better results different measures can be used. The performan
 3D Data
 ![3D Data](images/data_3d_l-0_1_meth-plus_dust-cosine_clust-20_40.jpg.jpg)
 6D Data
-![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-40_60.jpg)
+![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-25_35.jpg)
 
 #### 2.5. Cluster prototype initialization
 The initialization of the prototypes is of high importance in kmeans. A proper initialization may lead to faster convergence and better results.
@@ -113,7 +114,7 @@ There are different initialization methods such as : selecting k observations at
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
 
-It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results.
+It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results. For this particular data set the cosine similarity proves to be give best results.
 
 
 3. Gaussian Mixture Model
