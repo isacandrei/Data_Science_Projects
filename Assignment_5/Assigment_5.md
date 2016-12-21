@@ -63,6 +63,8 @@ In order to select the best possible K some evaluation should be performed. The 
   
 After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
 
+The source code used for this results is `Assign2.m (for the 3D data),Assign2_2.m and Assign26D.m(for the 6D data)`
+
 Thw following results are obtained by using kmeans++ initialization and squared euclidean distance : 
 ![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
@@ -114,7 +116,7 @@ There are different initialization methods such as : selecting k observations at
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
 
-It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results. For this particular data set the cosine similarity proves to be give best results.
+It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results. For this particular data set the cosine similarity proves to be give best results. 
 
 
 3. Gaussian Mixture Model
