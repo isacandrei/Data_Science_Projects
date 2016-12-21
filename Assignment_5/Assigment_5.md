@@ -7,7 +7,7 @@ Assignment 5 (Group 16)
 
 **December XX, 2016**
 
-1. Aglomerative Clustering
+1. Agglomerative Clustering
 ----------------------------
 For this assigment we have considered a combination of Matlab and R for their already build libraries. 
 
@@ -97,20 +97,20 @@ There are different initialization methods such as : selecting k observations at
 
 ###Cluster
 3D Data
-![3D Data](images/data_3d_l-0_1_meth-cluster_dist-sq_eucl_clust-2_102.jpg)
+![3D Data](images/data_3d_l-0_1_meth-cluster_dist-sq_eucl_clust-20_40.jpg)
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-cluster_dist-sq_eucl_clust-40_60.jpg)
 
 
 ###Sample
 3D Data
-![3D Data](images/data_3d_l-0_1_meth-sample_dist-sq_eucl_clust-2_102.jpg)
+![3D Data](images/data_3d_l-0_1_meth-sample_dist-sq_eucl_clust-20_40.jpg)
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-sample_dist-sq_eucl_clust-40_60.jpg)
 
 ###Uniform
 3D Data
-![3D Data](images/data_3d_l-0_1_meth-uniform_dist-sq_eucl_clust-2_102.jpg)
+![3D Data](images/data_3d_l-0_1_meth-uniform_dist-sq_eucl_clust-20_40.jpg)
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
 
