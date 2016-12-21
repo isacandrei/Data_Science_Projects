@@ -121,4 +121,6 @@ It is clear that each initialization method gives different results. In order to
 
 3. Gaussian Mixture Model
 ----------------------------
-<!--- test --->
+#### 3.1 Pseudo-code for GMM
+
+1) Estimate \theta
