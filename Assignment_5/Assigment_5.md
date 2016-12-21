@@ -47,8 +47,11 @@ At each iteration the algorithm performs number of assignments. A point can be e
 #### 2.2. Difference between 3D and 6D data
 The following two plots represent the visual difference between the 3D and 6D data.
 
+![Scatter plot of the 3D Data](images/scatter3d.jpg)
 
-As it is seen from the figures the 3D data seems to be more dense on the left and more scattered on the right. When the velocities are applied it is easy to see that the density which is observed on the 3D scatter plot is actually the center of the galaxy. 
+![6D Data plotted](images/quiver6d.jpg)
+
+As it is seen from the figures the 3D data seems to be more dense on one of the sides and more scattered on the other. When the velocities are applied it is easy to see that the density which is observed on the 3D scatter plot is actually the galactic center. From the two plots it is easy to see that the 3D does not bring much visual information and one can not make many assumptions about the arrangement of the stars while the 6D gives much more clearer idea what each point in the data set represents and how it is positioned compared to the others.
 
 #### 2.3. Best number of K 
 In order to select the best possible K some evaluation should be performed. The most appropriate K would be the one that minimizes the summarized square error (SSE). In finding the most appropriate value of K the following steps were followed:
@@ -70,20 +73,20 @@ In order to get more precise results the next step is to explore this region. To
 
 As a result the value of K which minimizes the value of SSE is 25 which is confirmed by the silhouette plot.
  
-<!--(6D graph + silhouette) -->
+![](images/data_6d_l-0_1_meth-plus_dist-sq_eucl_clust-40_60.jpg)
 
-For the 6D data the it is 54.
+For the 6D data the it is 44.
 
 #### 2.4. Different distances of measure
 In order to achieve better results different measures can be used. The performance of the algorithm 
 ###Squared Euclidean
 
-![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
-<!--[comment] : <> (Squared euclidean 6d)-->
+![3D Data](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
+![6D Data](images/data_6d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
 ###Cosine
-<!--[comment] : <> (Cosine 3d) -->
-<!--[comment] : <> (Cosine 6d)-->
+![3D Data](images/data_3d_l-0_1_meth-plus_dist-cosine_clust-2_102.jpg)
+![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-40_60.jpg)
 
 ###SquaredEuclidean
 #### 2.5. Cluster prototype initialization
@@ -91,16 +94,17 @@ The initialization of the prototypes is of high importance in kmeans. A proper i
 There are different initialization methods such as : selecting k observations at random, selecting uniformly k observations at random, performing preliminary clustering of the data, etc.
 
 ###Cluster
-<!--[comment] : <> (Cluster 3d)-->
-<!--[comment] : <> (Cluster 6d)-->
+![3D Data](images/data_3d_l-0_1_meth-cluster_dist-sq_eucl_clust-2_102.jpg)
+![6D Data](images/data_6d_l-0_1_meth-cluster_dist-sq_eucl_clust-40_60.jpg)
+
 
 ###Sample
-<!--[comment] : <> (Sample 3d)-->
-<!--[comment] : <> (Sample 6d)-->
+![3D Data](images/data_3d_l-0_1_meth-sample_dist-sq_eucl_clust-2_102.jpg)
+![6D Data](images/data_6d_l-0_1_meth-sample_dist-sq_eucl_clust-40_60.jpg)
 
 ###Uniform
-<!--[comment] : <> (Uniform 3d)-->
-<!--[comment] : <> (Uniform 6d)-->
+![3D Data](images/data_3d_l-0_1_meth-uniform_dist-sq_eucl_clust-2_102.jpg)
+![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
 
 It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made.
 
