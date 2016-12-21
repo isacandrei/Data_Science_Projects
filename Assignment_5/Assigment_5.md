@@ -90,7 +90,6 @@ In order to achieve better results different measures can be used. The performan
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-40_60.jpg)
 
-###SquaredEuclidean
 #### 2.5. Cluster prototype initialization
 The initialization of the prototypes is of high importance in kmeans. A proper initialization may lead to faster convergence and better results.
 There are different initialization methods such as : selecting k observations at random, selecting uniformly k observations at random, performing preliminary clustering of the data, etc.
