@@ -86,7 +86,7 @@ In order to achieve better results different measures can be used. The performan
 
 ###Cosine
 3D Data
-![3D Data](images/data_3d_l-0_1_meth-plus_dist-cosine_clust-2_102.jpg)
+![3D Data](images/data_3d_l-0_1_meth-plus_dust-cosine_clust-20_40.jpg.jpg)
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-40_60.jpg)
 
@@ -114,6 +114,7 @@ There are different initialization methods such as : selecting k observations at
 ![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
 
 It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results.
+
 
 3. Gaussian Mixture Model
 ----------------------------
