@@ -87,7 +87,7 @@ In order to achieve better results different measures can be used. The performan
 
 ###Cosine
 3D Data
-![3D Data](images/data_3d_l-0_1_meth-plus_dust-cosine_clust-20_40.jpg.jpg)
+![3D Data](images/data_3d_l-0_1_meth-plus_dust-cosine_clust-20_40.jpg)
 6D Data
 ![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-25_35.jpg)
 
