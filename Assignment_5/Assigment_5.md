@@ -35,8 +35,7 @@ The matlab `evalclusters`matlab eval clusters
 
 2. K-Means Clustering
 ----------------------------
-2.1. Proof of convergence 
-
+#### 2.1. Proof of convergence 
 In order to prove the convergence of the K-Means algorithm let us first look at some of its properties:
 
 1. There are k<sup>N</sup> possible assignments
@@ -45,14 +44,13 @@ In order to prove the convergence of the K-Means algorithm let us first look at 
   
 At each iteration the algorithm performs number of assignments. A point can be either assigned to a new cluster or left in the old one. As a result the centroid may change or may remain the same. If the centroid changes it reduces the distance to the members of the cluster it represents. Since there is a finite number of possible assignments the algorithm will either enter a cycle where individual points will switch between neighbour cluster (especially in case of high density data),in which case there will be small changes in the SSE for the different clusters, or will not change at all. Hence the algorithm will converge in finite time.
 
-2.2. Difference between 3D and 6D data
-
+#### 2.2. Difference between 3D and 6D data
 The following two plots represent the visual difference between the 3D and 6D data.
 
 
 As it is seen from the figures the 3D data seems to be more dense on the left and more scattered on the right. When the velocities are applied it is easy to see that the density which is observed on the 3D scatter plot is actually the center of the galaxy. 
 
-2.3. Best number of K 
+#### 2.3. Best number of K 
 In order to select the best possible K some evaluation should be performed. The most appropriate K would be the one that minimizes the summarized square error (SSE). In finding the most appropriate value of K the following steps were followed:
   1 10% of the original data is uniformly sampled.
   2 For K values ranging from 10 to 100, increasing with step 10 the KMeans method is applied.
@@ -60,7 +58,7 @@ In order to select the best possible K some evaluation should be performed. The 
   4 The process is repeated 50 times for different initial prototypes in order to minimize initialization errors.
   5.The final value of SSE represents the average result from running the process 50 times for each cluster size.
   
- After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
+After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
  
 ![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
 
@@ -76,7 +74,7 @@ As a result the value of K which minimizes the value of SSE is 25 which is confi
 
 For the 6D data the it is 54.
 
-2.4. Different distances of measure
+#### 2.4. Different distances of measure
 In order to achieve better results different measures can be used. The performance of the algorithm 
 ###Squared Euclidean
 
@@ -88,7 +86,7 @@ In order to achieve better results different measures can be used. The performan
 <!--[comment] : <> (Cosine 6d)-->
 
 ###SquaredEuclidean
-2.5. Cluster prototype initialization
+#### 2.5. Cluster prototype initialization
 The initialization of the prototypes is of high importance in kmeans. A proper initialization may lead to faster convergence and better results.
 There are different initialization methods such as : selecting k observations at random, selecting uniformly k observations at random, performing preliminary clustering of the data, etc.
 
