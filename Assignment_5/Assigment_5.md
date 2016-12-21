@@ -7,7 +7,7 @@ Assignment 5 (Group 16)
 
 **December XX, 2016**
 
-1. Aglomerative Clustering
+1. Agglomerative Clustering
 ----------------------------
 For this assigment we have considered a combination of Matlab and R for their already build libraries. 
 
