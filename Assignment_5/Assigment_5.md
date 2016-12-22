@@ -28,10 +28,38 @@ The hopkins analysis is very computationally expensive, running it for 1000 samp
 #### 1.4 Plots
 
 The dendograms were created using 33.000 random data entries form the initial data set. The folowing linkeages were generated: Average, Centroid, Complete, Single Link and Ward. The differences between them will be outlined in section 1.5.
+
+#### Average Linkeage
+
 ![Average Linkeage Dendogram - 3D] (images/average_3d.png)
 ![Average Linkeage Dendogram - 6D] (images/average_6d.png)
 
-#### 1.5 ,complete - larger variance between clusters , ward - 
+#### Cetroid Linkeage
+
+![] (images/centroid.png)
+![] (images/centroid6d.png)
+
+#### Complete Linkeage
+
+![] (images/complete.png)
+![] (images/complete6D.png)
+
+#### Single Linkeage
+
+![] (images/single.png)
+![] (images/single6d.png)
+
+#### Ward Linkeage
+
+![] (images/ward.png)
+![] (images/ward6d.png)
+
+
+#### 1.5 Linkeages
+
+The adendograms were considered as the reperesentation of 5 different linkeages: average, centroid, complete, single, ward. All the dendodrams were generated with the same radomply sampled data set.
+
+The single link method is not suitable for hierarchical 
 
 2. K-Means Clustering
 ----------------------------
@@ -159,9 +187,6 @@ We can also note that there is no significant different between the log likeliho
 
 #### 3.3 Compare the cluster cohesion and separation
 
-
-
-
 4. May the "best" win
-----------------------------
+
 In order to achieve the best results, the methods which were explained in 2 were used. First analyze cluster sizes up to 100,starting from 2 and incrasing the step by 10, to find a region where the error drops. Once such a region is found more precise analysis is performed. In order to find the method which gives minimum error several initialization methods and distances were used. For the 3D and 6D data the combination of kmeans++ initialization and cosine distance gives the results with minimum error.For the 3D data the optimal number of clusters is 24 while for the 6D it came out to be 31. The results from the clustering can be found in files `group_16_best_3d.txt` and `group_16_best_6d.txt` where each line's number is the index of the row in the matrix and each value is the number of the cluster it is part of.
