@@ -5,7 +5,7 @@ Assignment 5 (Group 16)
 
 **Introduction to Data Science**
 
-**December XX, 2016**
+**December 22, 2016**
 
 1. Agglomerative Clustering
 ----------------------------
@@ -24,9 +24,6 @@ The hopkins analysis was performed in this [*script*](Assign1.R) for both 3d and
 `0.05771323` for the 6d data taking 1000 samples from the data set. 
 
 The hopkins analysis is very computationally expensive, running it for 1000 samples took over 6 hours for each data set. Also these results are not favorable for clustering, both are less than 0.5 => the data is randomly distributed.
-
-The matlab `evalclusters`matlab eval clusters
-
 
 #### 1.4 Plots
 ![] (Rplot03.png)
@@ -121,4 +118,40 @@ It is clear that each initialization method gives different results. In order to
 
 3. Gaussian Mixture Model
 ----------------------------
-<!--- test --->
+#### 3.1 Pseudo-code for GMM
+
+1) Estimate θ (initial weights, means and covariance matrices) given observed data point and discrete random variable using the likelihood function
+
+2) Estimation step: for each data point take the expectation using the current θ(m) and compute the responsibility of Gaussian k (each cluster) for each data point
+
+3) Maximization step: for each Gaussian k (each cluster) update the θ(m+1) parameter
+
+4) Evaluate the log likelihood value at each iteration by returning to step 2 until it stabilizes (e.g. if it does not change anymore)
+
+#### 3.2.1 Initial covariance matrices and means
+For this exercise, we have used 2 methods to initialize the initial converiance matrices and means. These methods are random and using the K-Means++ algorithm. For the random initialization, the function selects k observation of the data set as the initial means and the covariance matrices are diagonal meaning that the variance of each feature will be each diagonal feature in the covariance matrix. When using K-Means++ algorithm, K-Means++ algorithm will be executed first in order to compute k centroids as the initial means for the EM algorithm. The covariance matrices for this method will still be diagonal.
+
+#### 3.2.2 Likelihood function values
+For this exercise, we used the "datasample" function in MatLab to randomly sample data point uniformly from the data set without replacement. In our case, we used sampled 10% of the data set. Afterwards, we used the "fitgmdist" function from MatLab where it will fit the data set into k components (clusters). From this function, we will iterate for different k components and the log likelihood value is observed. The script for random initialization is called [*assign3rand.m*](assign3rand.m) and the script for K-Means++ initialization is called [*assign3plus.m*](assign3plus.m).
+
+<center>**Random Initialization for 3D data set**</center>
+
+![Random Initialization](images/loglike3d_rand.png)
+
+<center>**K-Means++ Initialization for 3D data set**</center>
+
+![K-Means++ Initialization](images/loglike3d_plus.png)
+
+We can see that there is no significant difference between the different initializations. We can also note that around ~30-40 components, the likelihood value will not change anymore.
+
+<center>**Random Initialization for 6D data set**</center>
+
+![Random Initialization](images/loglike6d_rand.png)
+
+<center>**K-Means++ Initialization for 6D data set**</center>
+
+![K-Means++ Initialization](images/loglike6d_plus.png)
+
+We can also note that there is no significant different between the log likelihood values from the different initialization. It is also good to note, it is not so clear to determine an optimal k components from the graphs, because from the 100 iterations, we can see that the likelihood value is still changing. We can roughly say that the optimal k components would be around ~50-60.
+
+#### 3.3 Compare the cluster cohesion and separation
