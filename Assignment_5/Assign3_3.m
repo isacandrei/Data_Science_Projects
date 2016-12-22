@@ -15,7 +15,7 @@ a=sum(x,1);
 max_cluster=find(a==max(a));
 q = find(P(:,max_cluster)>0.7);
 
- dlmwrite('assign3_3_3d.txt',q)
+save('indices_3_3_3d.mat','q')
  
  %-------------------------------------------------------
  
@@ -36,7 +36,7 @@ a=sum(x,1);
 max_cluster=find(a==max(a));
 q = find(P(:,max_cluster)>0.7);
 
- dlmwrite('assign3_3_6d.txt',q)
+save('indices_3_3_6d.mat','q')
 
  
  
