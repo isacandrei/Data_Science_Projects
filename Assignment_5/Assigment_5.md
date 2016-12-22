@@ -191,7 +191,16 @@ We can see that there is no significant difference between the different initial
 We can also note that there is no significant different between the log likelihood values from the different initialization. It is also good to note, it is not so clear to determine an optimal k components from the graphs, because from the 100 iterations, we can see that the likelihood value is still changing. We can roughly say that the optimal k components would be around ~50-60.
 
 #### 3.3 Compare the cluster cohesion and separation
-For this exercise, we generated a plot of the posterior probabilities of the components where we then filter out the the stars with a probability higher than 0.7 belonging to a cluster. Then we summed up every star in their cluster to find the largest cluster in the galaxy. Afterwards, for the biggest cluster, we will then find the corresponding indices of the stars belonging to the largest cluster. The script used for this exercise is [*Assign3_3.m *](Assign3_3.m).
+For this exercise, we generated a plot of the posterior probabilities of the components where we then filter out the the stars with a probability higher than 0.7 belonging to a cluster. Then we summed up every star in their cluster to find the largest cluster in the galaxy. Afterwards, for the biggest cluster, we will then find the corresponding indices of the stars belonging to the largest cluster. The script used for this exercise is [*Assign3_3.m*](Assign3_3.m).
+
+<center>**3D Data**</center>
+
+![3D Data](images/scatter3probPlot.jpg)
+
+<center>**6D Data**</center>
+
+![6D Data](images/scatter6probPlot.jpg)
+
 
 4. May the "best" win
 ----------------------
