@@ -134,10 +134,8 @@ For this exercise, we have used 2 methods to initialize the initial converiance 
 #### 3.2.2 Likelihood function values
 For this exercise, we used the "datasample" function in MatLab to randomly sample data point uniformly from the data set without replacement. In our case, we used sampled 10% of the data set. Afterwards, we used the "fitgmdist" function from MatLab where it will fit the data set into k components (clusters). From this function, we will iterate for different k components and the log likelihood value is observed. The script for random initialization is called [*assign3rand.m*](assign3rand.m) and the script for K-Means++ initialization is called [*assign3plus.m*](assign3plus.m).
 
-**Random Initialization**
+<center>**Random Initialization**</center>
 ![Random Initialization](images/loglike3d_rand.png)
 
-**K-Means++ Initialization**
+<center>**K-Means++ Initialization**</center>
 ![K-Means++ Initialization](images/loglike3d_plus.png)
-
-
