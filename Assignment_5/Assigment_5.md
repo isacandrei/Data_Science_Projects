@@ -9,13 +9,13 @@ Assignment 5 (Group 16)
 
 1. Agglomerative Clustering
 ----------------------------
-For this assigment we have considered a combination of Matlab and R for their already build libraries. 
+For this assignment we have considered a combination of Matlab and R for their already build libraries. 
 
-#### 1.1 Dificulties (Big dataset, Large distance matrix,too much computational time)
-Beucause of the large dataset (330000 records) of the type double, the distance matrix (330000 x 330000) would be too large to store in memor. therefore we have sampled the data with the Matlab function `datasample`, which ensures random sapling of the data. The computational time for the `clusteddata` function is also to big for the whole dataset. 
+#### 1.1 Difficulties (Big dataset, Large distance matrix,too much computational time)
+Because of the large dataset (330000 records) of the type double, the distance matrix (330000 x 330000) would be too large to store in memory. therefore we have sampled the data with the Matlab function `datasample`, which ensures random sapling of the data. The computational time for the `clusteddata` function is also to big for the whole dataset. 
 
 #### 1.2 Solutions (uniformly sample from dataset, change linkage method to ward?)
-We have sampled the data with the Matlab function `datasample`, which ensures random sapling of the data. The data used consists of 10% of the initial dataset. Of couser, different linkeade methods reflect different running times, the most offective one beeing the `ward`. (Please correct me if not.)
+We have sampled the data with the Matlab function `datasample`, which ensures random sapling of the data. The data used consists of 10% of the initial dataset. Of course, different linkage methods reflect different running times, the most effective one being the `ward`. (Please correct me if not.)
 #### 1.3 
 Well, the obvious difference between the 2 sets of data is that the 3d data represents points in space, while the 6d data represents points in space with their corresponding vector of speed and direction. 
 The hopkins analysis was performed in this [*script*](Assign1.R) for both 3d and 6d data using R `clustertend` library. The results are:
@@ -23,12 +23,48 @@ The hopkins analysis was performed in this [*script*](Assign1.R) for both 3d and
 `0.01340395` for the 3d data taking 1000 samples from the data set. 
 `0.05771323` for the 6d data taking 1000 samples from the data set. 
 
-The hopkins analysis is very computationally expensive, running it for 1000 samples took over 6 hours for each data set. Also these results are not favorable for clustering, both are less than 0.5 => the data is randomly distributed.
+The hopkins analysis is very computationally expensive, running it for 1000 samples took over 6 hours for each data set. Also these results are not favourable for clustering, both are less than 0.5 => the data is randomly distributed.
 
 #### 1.4 Plots
-![] (Rplot03.png)
 
-#### 1.5 ,complete - larger variance between clusters , ward - 
+The dendograms were created using 33.000 random data entries form the initial data set. The folowing Linkages were generated: Average, Centroid, Complete, Single Link and Ward. The differences between them will be outlined in section 1.5.
+
+
+#### Single Linkage
+
+![] (images/single.png)
+![] (images/single6d.png)
+
+#### Complete Linkage
+
+![] (images/complete.png)
+![] (images/complete6D.png)
+
+#### Average Linkage
+
+![Average Linkage Dendogram - 3D] (images/average_3d.png)
+![Average Linkage Dendogram - 6D] (images/average_6d.png)
+
+#### Cetroid Linkage
+
+![] (images/centroid.png)
+![] (images/centroid6d.png)
+
+#### Ward Linkage
+
+![] (images/ward.png)
+![] (images/ward6d.png)
+
+
+#### 1.5 Linkages
+
+The dendograms were considered as the representation of 5 different Linkages: average, centroid, complete, single, ward. All the dendodrams were generated with the same randomly sampled data set.
+
+The complete link, as opposed to single link, considers the distance between the two most distant points in the data, therefore this gives better results then the single link method. 
+
+Another method for cluster validation is the average link, which computes the averages of all the distances between the points of two clusters before merging them, this can be seen as an improvement to the complete link, but it is more computationally expensive.
+
+We consider that the Ward method gives the most interesting results based on the dendograms, because it has the biggest differences between the clusters, meaning the clusters are better defined, that the link did not merge clusters that are not similar.
 
 2. K-Means Clustering
 ----------------------------
@@ -48,7 +84,7 @@ The following two plots represent the visual difference between the 3D and 6D da
 
 ![6D Data plotted](images/quiver6d.jpg)
 
-As it is seen from the figures the 3D data seems to be more dense on one of the sides and more scattered on the other. When the velocities are applied it is easy to see that the density which is observed on the 3D scatter plot is actually the galactic center. From the two plots it is easy to see that the 3D does not bring much visual information and one can not make many assumptions about the arrangement of the stars while the 6D gives much more clearer idea what each point in the data set represents and how it is positioned compared to the others.
+As it is seen from the figures the 3D data seems to be more dense on one of the sides and more scattered on the other. When the velocities are applied it is easy to see that the density which is observed on the 3D scatter plot is actually the galactic centre. From the two plots it is easy to see that the 3D does not bring much visual information and one can not make many assumptions about the arrangement of the stars while the 6D gives much more clearer idea what each point in the data set represents and how it is positioned compared to the others.
 
 #### 2.3. Best number of K 
 In order to select the best possible K some evaluation should be performed. The most appropriate K would be the one that minimizes the summarized square error (SSE). In finding the most appropriate value of K the following steps were followed:
@@ -155,3 +191,9 @@ We can see that there is no significant difference between the different initial
 We can also note that there is no significant different between the log likelihood values from the different initialization. It is also good to note, it is not so clear to determine an optimal k components from the graphs, because from the 100 iterations, we can see that the likelihood value is still changing. We can roughly say that the optimal k components would be around ~50-60.
 
 #### 3.3 Compare the cluster cohesion and separation
+For this exercise, we generated a plot of the posterior probabilities of the components where we then filter out the the stars with a probability higher than 0.7 belonging to a cluster. Then we summed up every star in their cluster to find the largest cluster in the galaxy. Afterwards, for the biggest cluster, we will then find the corresponding indices of the stars belonging to the largest cluster.
+
+
+4. May the "best" win
+----------------------
+In order to achieve the best results, the methods which were explained in 2 were used. First analyze cluster sizes up to 100,starting from 2 and incrasing the step by 10, to find a region where the error drops. Once such a region is found more precise analysis is performed. In order to find the method which gives minimum error several initialization methods and distances were used. For the 3D and 6D data the combination of kmeans++ initialization and cosine distance gives the results with minimum error.For the 3D data the optimal number of clusters is 24 while for the 6D it came out to be 31. The results from the clustering can be found in files `group_16_best_3d.txt` and `group_16_best_6d.txt` where each line's number is the index of the row in the matrix and each value is the number of the cluster it is part of.
