@@ -142,7 +142,7 @@ For this exercise, we used the "datasample" function in MatLab to randomly sampl
 
 ![K-Means++ Initialization](images/loglike3d_plus.png)
 
-We can see that there is no significant difference between the different initializations. We can also note that around 30~40 components, the likelihood value will not change anymore.
+We can see that there is no significant difference between the different initializations. We can also note that around ~30-40 components, the likelihood value will not change anymore.
 
 <center>**Random Initialization for 6D data set**</center>
 
@@ -151,3 +151,5 @@ We can see that there is no significant difference between the different initial
 <center>**K-Means++ Initialization for 6D data set**</center>
 
 ![K-Means++ Initialization](images/loglike6d_plus.png)
+
+We can also note that there is no significant different between the log likelihood values from the different initialization. It is also good to note, it is not so clear to determine an optimal k components from the graphs, because from the 100 iterations, we can see that the likelihood value is still changing. We can roughly say that the optimal k components would be around ~50-60.
