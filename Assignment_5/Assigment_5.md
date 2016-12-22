@@ -29,6 +29,17 @@ The hopkins analysis is very computationally expensive, running it for 1000 samp
 
 The dendograms were created using 33.000 random data entries form the initial data set. The folowing Linkages were generated: Average, Centroid, Complete, Single Link and Ward. The differences between them will be outlined in section 1.5.
 
+
+#### Single Linkage
+
+![] (images/single.png)
+![] (images/single6d.png)
+
+#### Complete Linkage
+
+![] (images/complete.png)
+![] (images/complete6D.png)
+
 #### Average Linkage
 
 ![Average Linkage Dendogram - 3D] (images/average_3d.png)
@@ -38,16 +49,6 @@ The dendograms were created using 33.000 random data entries form the initial da
 
 ![] (images/centroid.png)
 ![] (images/centroid6d.png)
-
-#### Complete Linkage
-
-![] (images/complete.png)
-![] (images/complete6D.png)
-
-#### Single Linkage
-
-![] (images/single.png)
-![] (images/single6d.png)
 
 #### Ward Linkage
 
@@ -59,7 +60,11 @@ The dendograms were created using 33.000 random data entries form the initial da
 
 The dendograms were considered as the representation of 5 different Linkages: average, centroid, complete, single, ward. All the dendodrams were generated with the same randomly sampled data set.
 
-The single link method is not suitable for hierarchical 
+The complete link, as opposed to single link, considers the distance between the two most distant points in the data, therefore this gives better results then the single link method. 
+
+Another method for cluster validation is the average link, which computes the averages of all the distances between the points of two clusters before merging them, this can be seen as an improvement to the complete link, but it is more computationally expensive.
+
+We consider that the Ward method gives the most interesting results based on the dendograms, because it has the biggest differences between the clusters, meaning the clusters are better defined, that the link did not merge clusters that are not similar.
 
 2. K-Means Clustering
 ----------------------------
