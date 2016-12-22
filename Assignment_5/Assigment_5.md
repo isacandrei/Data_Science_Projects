@@ -28,8 +28,8 @@ The hopkins analysis is very computationally expensive, running it for 1000 samp
 #### 1.4 Plots
 
 The dendograms were created using 33.000 random data entries form the initial data set. The folowing linkeages were generated: Average, Centroid, Complete, Single Link and Ward. The differences between them will be outlined in section 1.5.
-![] (average_3d.jpg)
-![] (average_6d.jpg)
+![Average Linkeage Dendogram - 3D] (images/average_3d.png)
+![Average Linkeage Dendogram - 6D] (images/average_6d.png)
 
 #### 1.5 ,complete - larger variance between clusters , ward - 
 
