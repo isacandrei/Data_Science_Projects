@@ -25,9 +25,6 @@ The hopkins analysis was performed in this [*script*](Assign1.R) for both 3d and
 
 The hopkins analysis is very computationally expensive, running it for 1000 samples took over 6 hours for each data set. Also these results are not favorable for clustering, both are less than 0.5 => the data is randomly distributed.
 
-The matlab `evalclusters`matlab eval clusters
-
-
 #### 1.4 Plots
 ![] (Rplot03.png)
 
@@ -130,3 +127,6 @@ It is clear that each initialization method gives different results. In order to
 3) Maximization step: for each Gaussian k (each cluster) update the θ(m+1) parameter
 
 4) Evaluate the log likelihood value at each iteration by returning to step 2 until it stabilizes (e.g. if it does not change anymore)
+
+#### 3.2.1 Initial covariance matrices and means
+For this exercise, we have used 2 methods to initialize the initial converiance matrices and means. These methods are random and using the K-Means++ algorithm. For the random initialization, the function selects k observation of the data set as the initial means and the covariance matrices are diagonal meaning that the variance of each feature will be each diagonal feature in the covariance matrix. When using K-Means++ algorithm, K-Means++ algorithm will be executed first in order to compute k centroids as the initial means for the EM algorithm. The covariance matrices for this method will still be diagonal.
