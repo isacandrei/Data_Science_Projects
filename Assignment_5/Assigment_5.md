@@ -187,6 +187,8 @@ We can also note that there is no significant different between the log likeliho
 
 #### 3.3 Compare the cluster cohesion and separation
 
+
+
 4. May the "best" win
 
 In order to achieve the best results, the methods which were explained in 2 were used. First analyze cluster sizes up to 100,starting from 2 and incrasing the step by 10, to find a region where the error drops. Once such a region is found more precise analysis is performed. In order to find the method which gives minimum error several initialization methods and distances were used. For the 3D and 6D data the combination of kmeans++ initialization and cosine distance gives the results with minimum error.For the 3D data the optimal number of clusters is 24 while for the 6D it came out to be 31. The results from the clustering can be found in files `group_16_best_3d.txt` and `group_16_best_6d.txt` where each line's number is the index of the row in the matrix and each value is the number of the cluster it is part of.
