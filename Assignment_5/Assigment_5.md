@@ -5,7 +5,7 @@ Assignment 5 (Group 16)
 
 **Introduction to Data Science**
 
-**December XX, 2016**
+**December 22, 2016**
 
 1. Agglomerative Clustering
 ----------------------------
@@ -130,3 +130,6 @@ It is clear that each initialization method gives different results. In order to
 
 #### 3.2.1 Initial covariance matrices and means
 For this exercise, we have used 2 methods to initialize the initial converiance matrices and means. These methods are random and using the K-Means++ algorithm. For the random initialization, the function selects k observation of the data set as the initial means and the covariance matrices are diagonal meaning that the variance of each feature will be each diagonal feature in the covariance matrix. When using K-Means++ algorithm, K-Means++ algorithm will be executed first in order to compute k centroids as the initial means for the EM algorithm. The covariance matrices for this method will still be diagonal.
+
+#### 3.2.2 Likelihood function values
+For this exercise, we used the "datasample" function in MatLab to randomly sample data point uniformly from the data set without replacement. In our case, we used sampled 10% of the data set. Afterwards, we used the "fitgmdist" function from MatLab where it will fit the data set into k components (clusters). From this function, we will iterate for different k components and the log likelihood value is observed. The script for random initialization is called [*assign3rand.m*](assign3rand.m) and the script for K-Means++ initialization is called [*assign3plus.m*](assign3plus.m).
