@@ -5,9 +5,9 @@ Assignment 5 (Group 16)
 
 **Introduction to Data Science**
 
-**December XX, 2016**
+**December 22, 2016**
 
-1. Aglomerative Clustering
+1. Agglomerative Clustering
 ----------------------------
 For this assigment we have considered a combination of Matlab and R for their already build libraries. 
 
@@ -25,9 +25,6 @@ The hopkins analysis was performed in this [*script*](Assign1.R) for both 3d and
 
 The hopkins analysis is very computationally expensive, running it for 1000 samples took over 6 hours for each data set. Also these results are not favorable for clustering, both are less than 0.5 => the data is randomly distributed.
 
-The matlab `evalclusters`matlab eval clusters
-
-
 #### 1.4 Plots
 ![] (Rplot03.png)
 
@@ -35,6 +32,130 @@ The matlab `evalclusters`matlab eval clusters
 
 2. K-Means Clustering
 ----------------------------
+#### 2.1. Proof of convergence 
+In order to prove the convergence of the K-Means algorithm let us first look at some of its properties:
+
+1. There are k<sup>N</sup> possible assignments
+2. On each iteration the closest point to a centroid is assigned to the cluster it represents
+3. The positions of the centroids are recalculated
+  
+At each iteration the algorithm performs number of assignments. A point can be either assigned to a new cluster or left in the old one. As a result the centroid may change or may remain the same. If the centroid changes it reduces the distance to the members of the cluster it represents. Since there is a finite number of possible assignments the algorithm will either enter a cycle where individual points will switch between neighbour cluster (especially in case of high density data),in which case there will be small changes in the SSE for the different clusters, or will not change at all. Hence the algorithm will converge in finite time.
+
+#### 2.2. Difference between 3D and 6D data
+The following two plots represent the visual difference between the 3D and 6D data.
+
+![Scatter plot of the 3D Data](images/scatter3d.jpg)
+
+![6D Data plotted](images/quiver6d.jpg)
+
+As it is seen from the figures the 3D data seems to be more dense on one of the sides and more scattered on the other. When the velocities are applied it is easy to see that the density which is observed on the 3D scatter plot is actually the galactic center. From the two plots it is easy to see that the 3D does not bring much visual information and one can not make many assumptions about the arrangement of the stars while the 6D gives much more clearer idea what each point in the data set represents and how it is positioned compared to the others.
+
+#### 2.3. Best number of K 
+In order to select the best possible K some evaluation should be performed. The most appropriate K would be the one that minimizes the summarized square error (SSE). In finding the most appropriate value of K the following steps were followed:
+  1 10% of the original data is uniformly sampled.
+  2 For K values ranging from 10 to 100, increasing with step 10 the KMeans method is applied.
+  3 At the end of the clustering for each cluster size is calculated the SSE.
+  4 The process is repeated 50 times for different initial prototypes in order to minimize initialization errors.
+  5.The final value of SSE represents the average result from running the process 50 times for each cluster size.
+  
+After the above described process is complete there is an initial point for analysis. After plotting the 3D data it is easy to see that there is a drastic drop in SSE for clustering of size 40. After applying the elbow criterion it may be assumed that the optimal value of K is between 20 and 40. 
+
+The source code used for this results is `Assign2.m (for the 3D data),Assign2_2.m and Assign26D.m(for the 6D data)`
+
+Thw following results are obtained by using kmeans++ initialization and squared euclidean distance : 
+![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
+
+In order to get more precise results the next step is to explore this region. To get these results the above described iteration is repeated, this time for K in the interval between 20-40. The following plots shows the results from the iteration.
+ 
+![](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-20_40.jpg)
+
+![](images/silhouette_3d_25_clusters.jpg)
+
+As a result the value of K which minimizes the value of SSE is 25 which is confirmed by the silhouette plot.
+ 
+![](images/data_6d_l-0_1_meth-plus_dist-sq_eucl_clust-40_60.jpg)
+
+For the 6D data the it is 44.
+
+#### 2.4. Different distances of measure
+In order to achieve better results different measures can be used. The performance of the algorithm 
+###Squared Euclidean
+
+![3D Data](images/data_3d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
+![6D Data](images/data_6d_l-0_1_meth-plus_dist-sq_eucl_clust-2_102.jpg)
+
+###Cosine
+3D Data
+![3D Data](images/data_3d_l-0_1_meth-plus_dust-cosine_clust-20_40.jpg)
+6D Data
+![6D Data](images/data_6d_l-0_1_meth-plus_dist-cosine_clust-25_35.jpg)
+
+#### 2.5. Cluster prototype initialization
+The initialization of the prototypes is of high importance in kmeans. A proper initialization may lead to faster convergence and better results.
+There are different initialization methods such as : selecting k observations at random, selecting uniformly k observations at random, performing preliminary clustering of the data, etc.
+
+###Cluster
+3D Data
+![3D Data](images/data_3d_l-0_1_meth-cluster_dist-sq_eucl_clust-20_40.jpg)
+6D Data
+![6D Data](images/data_6d_l-0_1_meth-cluster_dist-sq_eucl_clust-40_60.jpg)
+
+
+###Sample
+3D Data
+![3D Data](images/data_3d_l-0_1_meth-sample_dist-sq_eucl_clust-20_40.jpg)
+6D Data
+![6D Data](images/data_6d_l-0_1_meth-sample_dist-sq_eucl_clust-40_60.jpg)
+
+###Uniform
+3D Data
+![3D Data](images/data_3d_l-0_1_meth-uniform_dist-sq_eucl_clust-20_40.jpg)
+6D Data
+![6D Data](images/data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.jpg)
+
+It is clear that each initialization method gives different results. In order to find the optimal one for given data set certain tests have to be made. Also depending on the data different methods have to be chosen in order to achieve the best possible results. For this particular data set the cosine similarity proves to be give best results. 
+
 
 3. Gaussian Mixture Model
 ----------------------------
+#### 3.1 Pseudo-code for GMM
+
+1) Estimate θ (initial weights, means and covariance matrices) given observed data point and discrete random variable using the likelihood function
+
+2) Estimation step: for each data point take the expectation using the current θ(m) and compute the responsibility of Gaussian k (each cluster) for each data point
+
+3) Maximization step: for each Gaussian k (each cluster) update the θ(m+1) parameter
+
+4) Evaluate the log likelihood value at each iteration by returning to step 2 until it stabilizes (e.g. if it does not change anymore)
+
+#### 3.2.1 Initial covariance matrices and means
+For this exercise, we have used 2 methods to initialize the initial converiance matrices and means. These methods are random and using the K-Means++ algorithm. For the random initialization, the function selects k observation of the data set as the initial means and the covariance matrices are diagonal meaning that the variance of each feature will be each diagonal feature in the covariance matrix. When using K-Means++ algorithm, K-Means++ algorithm will be executed first in order to compute k centroids as the initial means for the EM algorithm. The covariance matrices for this method will still be diagonal.
+
+#### 3.2.2 Likelihood function values
+For this exercise, we used the "datasample" function in MatLab to randomly sample data point uniformly from the data set without replacement. In our case, we used sampled 10% of the data set. Afterwards, we used the "fitgmdist" function from MatLab where it will fit the data set into k components (clusters). From this function, we will iterate for different k components and the log likelihood value is observed. The script for random initialization is called [*assign3rand.m*](assign3rand.m) and the script for K-Means++ initialization is called [*assign3plus.m*](assign3plus.m).
+
+<center>**Random Initialization for 3D data set**</center>
+
+![Random Initialization](images/loglike3d_rand.png)
+
+<center>**K-Means++ Initialization for 3D data set**</center>
+
+![K-Means++ Initialization](images/loglike3d_plus.png)
+
+We can see that there is no significant difference between the different initializations. We can also note that around ~30-40 components, the likelihood value will not change anymore.
+
+<center>**Random Initialization for 6D data set**</center>
+
+![Random Initialization](images/loglike6d_rand.png)
+
+<center>**K-Means++ Initialization for 6D data set**</center>
+
+![K-Means++ Initialization](images/loglike6d_plus.png)
+
+We can also note that there is no significant different between the log likelihood values from the different initialization. It is also good to note, it is not so clear to determine an optimal k components from the graphs, because from the 100 iterations, we can see that the likelihood value is still changing. We can roughly say that the optimal k components would be around ~50-60.
+
+#### 3.3 Compare the cluster cohesion and separation
+
+4. May the "best" win
+
+In order to achieve the best results, the methods which were explained in 2 were used. First analyze cluster sizes up to 100,starting from 2 and incrasing the step by 10, to find a region where the error drops. Once such a region is found more precise analysis is performed. In order to find the method which gives minimum error several initialization methods and distances were used. For the 3D and 6D data the combination of kmeans++ initialization and cosine distance gives the results with minimum error. The results from the clustering can be found in files `group_16_best_3d.txt` and `group_16_best_6d.txt` where each line's number is the index of the row in the matrix and each value is the number of the cluster it is part of.
