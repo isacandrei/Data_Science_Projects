@@ -153,3 +153,5 @@ We can see that there is no significant difference between the different initial
 ![K-Means++ Initialization](images/loglike6d_plus.png)
 
 We can also note that there is no significant different between the log likelihood values from the different initialization. It is also good to note, it is not so clear to determine an optimal k components from the graphs, because from the 100 iterations, we can see that the likelihood value is still changing. We can roughly say that the optimal k components would be around ~50-60.
+
+#### 3.3 Compare the cluster cohesion and separation
