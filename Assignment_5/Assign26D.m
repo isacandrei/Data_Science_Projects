@@ -40,9 +40,9 @@ xlabel('K');
 ylabel('SSE');
 savefig('data_6d_l-0_1_meth-uniform_dist-sq_eucl_clust-40_60.fig');
 %-------------------------------------------------------------------------
-ess=KMeansEval2(data,[40:1:60],'plus','cosine');
+ess=KMeansEval2(data,[25:1:35],'plus','cosine');
 figure
 plot(ess(:,1),ess(:,2));
 xlabel('K');
 ylabel('SSE');
-savefig('data_6d_l-0_1_meth-plus_dist-cosine_clust-40_60.fig');
+savefig('data_6d_l-0_1_meth-plus_dist-cosine_clust-25_35.fig');
