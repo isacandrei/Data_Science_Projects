@@ -124,7 +124,9 @@ It is clear that each initialization method gives different results. In order to
 #### 3.1 Pseudo-code for GMM
 
 1) Estimate θ (initial weights, means and covariance matrices) given observed data point and discrete random variable using the likelihood function
+
 2) Estimation step: for each data point take the expectation using the current θ(m) and compute the responsibility of Gaussian k (each cluster) for each data point
+
 3) Maximization step: for each Gaussian k (each cluster) update the θ(m+1) parameter
+
 4) Evaluate the log likelihood value at each iteration by returning to step 2 until it stabilizes (e.g. if it does not change anymore)
-3) 
