@@ -26,7 +26,10 @@ The hopkins analysis was performed in this [*script*](Assign1.R) for both 3d and
 The hopkins analysis is very computationally expensive, running it for 1000 samples took over 6 hours for each data set. Also these results are not favorable for clustering, both are less than 0.5 => the data is randomly distributed.
 
 #### 1.4 Plots
-![] (Rplot03.png)
+
+The dendograms were created using 33.000 random data entries form the initial data set. The folowing linkeages were generated: Average, Centroid, Complete, Single Link and Ward. The differences between them will be outlined in section 1.5.
+![] (average_3d.jpg)
+![] (average_6d.jpg)
 
 #### 1.5 ,complete - larger variance between clusters , ward - 
 
