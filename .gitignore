@@ -1,6 +1,8 @@
 .DS_Store
 *.m~
+*.Rhistory
 
 *.tsv
 *.pcl
 *.csv
+.rdata
