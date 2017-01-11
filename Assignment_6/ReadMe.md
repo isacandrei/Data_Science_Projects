@@ -135,6 +135,11 @@ There is no clear choice, but first is preffered:
 9 .  milton-paradise.txt  -  0.0548
 10 .  austen-emma.txt  -  0.0473
 ```
+
+We can observe that for the description `story with the sailor and the whale`, the result `melville-moby_dick.txt` has a significant advantage over the second result - `0.3534 >> 0.024`. For the second search, `story with the girl falling into a rabbit hole`, the difference between the first who results is not of the order of magnitude - `0.0476 > 0.0397`, but still, the first result is correct `carroll-alice.txt`.
+
+In order to test the correctness of the algorithm, we have added the `Alice` word in the previous search and we have observed that the `carroll-alice.txt` result is now a clear winner. The last performed search is with random words and it clearly returns no clear winner, the difference between the top 10 results are minor.
+
 3. Summarize A Novel in 200 Words
 ----------------------------
 
