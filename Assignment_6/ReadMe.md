@@ -20,18 +20,18 @@ The TF.IDF of the Gutenberg corpus was performed using the `TfidfVectorizer` for
 
 The results of the `fit_transform` function is a matrix of word importances where each row represent the one file. The TF.IDF result is already normalized and ready to use for further analysis. 
 
-`
+```
 [[ 0.00104886  0.00061947  0.         ...,  0.          0.          0.00052443]
  [ 0.          0.00065283  0.00084064 ...,  0.00168129  0.00084064  0.        ]
  [ 0.          0.00042669  0.00054944 ...,  0.00109887  0.00054944  0.        ]]
- `
+ ```
 
 #### 2.2. Top 10 words
 
 The first three texts in the corpus were chosen to extract the top 10 words according to the TF.IDF. Having already the TF.IDF computed, the next step is sorting the array corresponding to each file and store the index of the top 10 words.
 
 The result is printed along the coefficient for each word:
-`
+```
 austen-emma.txt
 mr  -  0.357436692024
 emma  -  0.344999193767
@@ -69,7 +69,7 @@ willoughby  -  0.156047609737
 edward  -  0.144501733023
 lucy  -  0.134374330607
 sister  -  0.120325525248
-`
+```
 
 #### 2.3. where-was-that 
 
