@@ -72,8 +72,69 @@ sister  -  0.120325525248
 ```
 
 #### 2.3. where-was-that 
+In order to find the text that most likely correspond to a description we are going to use the cosine measure between normalized vectors of the TF.IDF of the description string and all the files in the corpus. 
+
+In order to achieve this we have created the `find` function that takes as parameter a string, the description. Further more, it computed the TF.IDF of all the files, including the description string as the last added file. It computes the cosine similarity for each possible pair by computing the dot product between the TF.IDF matrix and its transposed matrix, this being possible because the result of the `fit_transform` function returns normalized results. Furthermore, the results only for the searched strings are taken, ordered and printed. If the difference between the first results and the second result is significantly better, than it is pointed that the first result is the most likely result for the query, otherwise the top 10 list is printed.
+
+```
+find("story with the sailor and the whale")
+find("story with the girl falling into a rabbit hole")
+find("story with the girl falling into a rabbit hole Alice")
+find("man walk story now then ago time")
+```
+
+```
+The first result is the clear choice:
+1 .  melville-moby_dick.txt  -  0.3534
+2 .  bryant-stories.txt  -  0.024
+3 .  chesterton-brown.txt  -  0.0174
+4 .  whitman-leaves.txt  -  0.0066
+5 .  edgeworth-parents.txt  -  0.0036
+6 .  carroll-alice.txt  -  0.0036
+7 .  burgess-busterbrown.txt  -  0.0
+8 .  austen-persuasion.txt  -  0.0
+9 .  austen-sense.txt  -  0.0
+10 .  bible-kjv.txt  -  0.0
 
 
+There is no clear choice, but first is preffered:
+1 .  carroll-alice.txt  -  0.0476
+2 .  bryant-stories.txt  -  0.0397
+3 .  chesterton-brown.txt  -  0.0274
+4 .  burgess-busterbrown.txt  -  0.0126
+5 .  edgeworth-parents.txt  -  0.0121
+6 .  whitman-leaves.txt  -  0.0117
+7 .  blake-poems.txt  -  0.0086
+8 .  chesterton-ball.txt  -  0.0083
+9 .  melville-moby_dick.txt  -  0.0075
+10 .  chesterton-thursday.txt  -  0.0043
+
+
+The first result is the clear choice:
+1 .  carroll-alice.txt  -  0.5139
+2 .  bryant-stories.txt  -  0.0311
+3 .  chesterton-brown.txt  -  0.0212
+4 .  burgess-busterbrown.txt  -  0.01
+5 .  edgeworth-parents.txt  -  0.0093
+6 .  whitman-leaves.txt  -  0.0091
+7 .  blake-poems.txt  -  0.0066
+8 .  chesterton-ball.txt  -  0.0065
+9 .  melville-moby_dick.txt  -  0.0059
+10 .  chesterton-thursday.txt  -  0.0033
+
+
+There is no clear choice, but first is preffered:
+1 .  chesterton-brown.txt  -  0.1277
+2 .  whitman-leaves.txt  -  0.0972
+3 .  bryant-stories.txt  -  0.0899
+4 .  melville-moby_dick.txt  -  0.0851
+5 .  edgeworth-parents.txt  -  0.0811
+6 .  chesterton-thursday.txt  -  0.0716
+7 .  austen-persuasion.txt  -  0.0643
+8 .  chesterton-ball.txt  -  0.063
+9 .  milton-paradise.txt  -  0.0548
+10 .  austen-emma.txt  -  0.0473
+```
 3. Summarize A Novel in 200 Words
 ----------------------------
 
