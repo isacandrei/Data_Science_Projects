@@ -30,7 +30,7 @@ For this exercise, we would need to find 10 frequent collocations of three words
 ----------------------------
 This exercise was done using the libraries `NLTK` and `skilearn` for python.
 
-[*Exercise 2*](Ex_2.ipynb)
+[*Exercise 2*](ex_2.ipynb)
 
 #### 2.1. TF.IDF
 
