@@ -30,6 +30,8 @@ For this exercise, we would need to find 10 frequent collocations of three words
 ----------------------------
 This exercise was done using the libraries `NLTK` and `skilearn` for python.
 
+[*Exercise 2*](Ex_2.ipynb)
+
 #### 2.1. TF.IDF
 
 The TF.IDF of the Gutenberg corpus was performed using the `TfidfVectorizer` form the skylearn library, the `stop_words='english'` parameter was passed in order to automatically remove not relevant words from the computations.
