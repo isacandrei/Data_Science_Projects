@@ -15,11 +15,16 @@ For this assignment, we have the 'state_union' corpus which consists of 66 State
 
 [*Exercise 1 part 1 & 2*](Ex1_12.ipynb)
 
-#### 3. CLean up data
+#### 3. Clean up data
 
-TO clean up the data, we have removed the stop words and special characters. We have also reduced a few terms to their stem term by using the PorterStemmer. It is good to note that the stemmer doesn't work that optimal looking at the fact sometimes it will remove i.e. the 'e' from 'peace'. Lastly, we have also used lemmatization to clean up certain terms in the document. Then we computed the 10 most common terms within each document of the corpus.
+To clean up the data, we have removed the stop words and special characters. We have also reduced a few terms to their stem term by using the PorterStemmer. It is good to note that the stemmer doesn't work that optimal looking at the fact sometimes it will remove i.e. the 'e' from 'peace'. Lastly, we have also used lemmatization to clean up certain terms in the document. Then we computed the 10 most common terms within each document of the corpus.
 
 [*Exercise 1 part 3*](Ex1_3.ipynb)
+
+#### 4. Collocations
+For this exercise, we would need to find 10 frequent collocations of three words within each document in the corpus, in which at least two words are proper names. We started by filtering out the stop words from the documents and the length of each word cannot be less than 3. We started off with a minimum size of the sliding window of 3 in which from the 20 collocations obtained, in most of them there are 10 frequent collocations. But by increasing the window size, we can see that more names seems to appear in the collocations. Also looking at the fact that the state of the union speeches are formal speeches in which the chance of names being used is higher and by using a bigger windows, it is most probable that you will find at least 2 names within one window.
+
+[*Exercise 1 part 4*](Ex1_4.ipynb)
 
 2. Your Own Search Engine
 ----------------------------
