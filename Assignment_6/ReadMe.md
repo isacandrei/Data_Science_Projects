@@ -9,6 +9,11 @@ Assignment 6 (Group 16)
 
 1. State of the Corpus
 ----------------------------
+#### 1 & 2. Term Frequency and Zipf's law
+
+For this assignment, we have the 'state_union' corpus which consists of 66 State of the Union speeches. Firstly, we determined the term frequency for every term in each of the document. Then we checked if the the term frequency follows Zipf's law. To determine the Zipf's law distribution, we will use the rank of each term by doing 1/rank * max(TF). Then the 2 distributions was plotted in a log-log scaled graph. According to the figures, we can see that it clearly follows Zipf's law.
+
+[*Exercise 1 part 1 & 2*](Ex1_12.ipynb)
 
 2. Your Own Search Engine
 ----------------------------
