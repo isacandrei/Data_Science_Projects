@@ -164,7 +164,7 @@ Sometimes summarizing a text can become a difficult task even for humans so maki
 
 1. Extraction-based summarization - an algorithm is applied which identifies the sentences which explain the text the best and they are extracted without any modifications.
 2. Abstraction-based summarization - an algorithm identifies the key phrases, sentences, paragraphs which are considered most important. After that the sections are paraphrased and the summary is generated. As a result the accuracy is better but the implementation of such system is much more difficult
-3. Aidded summarization - some machine learning techiques are applied and appart from fully automated summarization a system is created which aids the user with the task of summarization. There are two types of systems - machine aided humman summarization (MAHS), which highlights the important parts of the text and there are human aided machine summarization (HAMS) systems which depend on post-processing.
+3. Aidded summarization - some machine learning techiques are applied and appart from fully automated summarization a system is created which aids the user with the task of summarization. There are two types of systems - machine aided human summarization (MAHS), which highlights the important parts of the text and there are human aided machine summarization (HAMS) systems which depend on post-processing.
 
 For the purposes of the assignment the extraction-based summarization techique will be used. As a result only the most relevant sentences will be used. In order to summarize a whole book in less than 200 words there are several steps which have to be executed:
 
