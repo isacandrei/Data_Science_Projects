@@ -15,6 +15,12 @@ For this assignment, we have the 'state_union' corpus which consists of 66 State
 
 [*Exercise 1 part 1 & 2*](Ex1_12.ipynb)
 
+#### 3. CLean up data
+
+TO clean up the data, we have removed the stop words and special characters. We have also reduced a few terms to their stem term by using the PorterStemmer. It is good to note that the stemmer doesn't work that optimal looking at the fact sometimes it will remove i.e. the 'e' from 'peace'. Lastly, we have also used lemmatization to clean up certain terms in the document. Then we computed the 10 most common terms within each document of the corpus.
+
+[*Exercise 1 part 3*](Ex1_3.ipynb)
+
 2. Your Own Search Engine
 ----------------------------
 This exercise was done using the libraries `NLTK` and `skilearn` for python.
