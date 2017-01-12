@@ -6,3 +6,6 @@
 *.pcl
 *.csv
 .rdata
+
+nltk_data
+.ipynb_checkpoints
